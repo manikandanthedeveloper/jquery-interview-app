@@ -5104,5 +5104,5 @@
         "title": "What is the difference between greedy and lazy quantifiers in regular expressions?",
         "category": "JavaScript",
         "answer": "<p>Greedy quantifiers attempt to match as much text as possible while still allowing the overall pattern to succeed. Lazy quantifiers attempt to match as little as possible. For example, <code>.*</code> is greedy while <code>.*?</code> is lazy.</p>"
-}
+    }
 ]
