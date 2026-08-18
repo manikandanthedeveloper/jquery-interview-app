@@ -1,0 +1,1262 @@
+[
+    {
+        "id": 1401,
+        "title": "What is jQuery and why was it widely used?",
+        "category": "jQuery",
+        "answer": "<p>jQuery is a lightweight JavaScript library that simplifies DOM manipulation, event handling, animations, AJAX requests, and cross-browser development. It provides a concise API that reduces the amount of JavaScript code developers need to write.</p>"
+    },
+    {
+        "id": 1402,
+        "title": "What is the difference between jQuery and JavaScript?",
+        "category": "jQuery",
+        "answer": "<p>JavaScript is the programming language, while jQuery is a JavaScript library built on top of JavaScript. jQuery provides simplified APIs for DOM manipulation, events, AJAX, and animations. Modern JavaScript provides many native APIs that reduce the need for jQuery in new applications.</p>"
+    },
+    {
+        "id": 1403,
+        "title": "How do you select an element using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>jQuery uses CSS selectors to select elements. For example, <code>$('#id')</code> selects an element by ID, <code>$('.class')</code> selects elements by class, and <code>$('div')</code> selects all div elements.</p>"
+    },
+    {
+        "id": 1404,
+        "title": "What is the difference between $(document).ready() and window.onload?",
+        "category": "jQuery",
+        "answer": "<p><code>$(document).ready()</code> executes when the DOM has been fully constructed without waiting for images and other resources to finish loading. <code>window.onload</code> waits for the entire page and its resources to load.</p>"
+    },
+    {
+        "id": 1405,
+        "title": "What is event delegation in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Event delegation attaches an event handler to a parent element instead of individual child elements. The event bubbles from the child to the parent, where jQuery determines the matching target. It is especially useful for dynamically created elements.</p>"
+    },
+    {
+        "id": 1406,
+        "title": "What is the difference between .prop() and .attr()?",
+        "category": "jQuery",
+        "answer": "<p><code>.attr()</code> works with HTML attributes, while <code>.prop()</code> works with DOM properties. For example, the current checked state of a checkbox should generally be accessed using <code>.prop('checked')</code>.</p>"
+    },
+    {
+        "id": 1407,
+        "title": "What is the difference between .val(), .text(), and .html()?",
+        "category": "jQuery",
+        "answer": "<p><code>.val()</code> gets or sets form control values. <code>.text()</code> gets or sets text content. <code>.html()</code> gets or sets HTML content and interprets markup as HTML.</p>"
+    },
+    {
+        "id": 1408,
+        "title": "What is the difference between .on(), .click(), and .bind()?",
+        "category": "jQuery",
+        "answer": "<p><code>.on()</code> is the recommended API for attaching events and supports event delegation. <code>.click()</code> is a shorthand method for click events. <code>.bind()</code> is an older API that has been deprecated and should not be used in modern jQuery code.</p>"
+    },
+    {
+        "id": 1409,
+        "title": "What is chaining in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>jQuery chaining allows multiple methods to be called on the same jQuery object because many jQuery methods return the jQuery object. For example, <code>$('#box').addClass('active').show().fadeIn();</code> performs multiple operations in one statement.</p>"
+    },
+    {
+        "id": 1410,
+        "title": "How do you make an AJAX request using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>The <code>$.ajax()</code> method can be used to make asynchronous HTTP requests. It allows you to configure the URL, HTTP method, headers, request data, response type, and error handling.</p>"
+    },
+    {
+        "id": 1411,
+        "title": "What is the difference between $.ajax(), $.get(), and $.post()?",
+        "category": "jQuery",
+        "answer": "<p><code>$.ajax()</code> provides full control over an AJAX request. <code>$.get()</code> is a convenience method for GET requests, while <code>$.post()</code> is a convenience method for POST requests.</p>"
+    },
+    {
+        "id": 1412,
+        "title": "How do you prevent event propagation in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use <code>event.stopPropagation()</code> to prevent an event from bubbling to parent elements. Use <code>event.preventDefault()</code> to prevent the browser's default action.</p>"
+    },
+    {
+        "id": 1413,
+        "title": "How do you add and remove CSS classes using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Use <code>.addClass()</code> to add a class, <code>.removeClass()</code> to remove a class, <code>.toggleClass()</code> to toggle a class, and <code>.hasClass()</code> to check whether an element contains a class.</p>"
+    },
+    {
+        "id": 1414,
+        "title": "What is the difference between .find() and .children()?",
+        "category": "jQuery",
+        "answer": "<p><code>.find()</code> searches through all matching descendants recursively, while <code>.children()</code> selects only the direct child elements.</p>"
+    },
+    {
+        "id": 1415,
+        "title": "How can you improve the performance of a jQuery application?",
+        "category": "jQuery",
+        "answer": "<p>Performance can be improved by caching selectors, reducing DOM manipulation, using event delegation, batching DOM updates, minimizing layout recalculations, avoiding unnecessary animations, and using native JavaScript APIs where appropriate.</p>"
+    },
+    {
+        "id": 1421,
+        "title": "What are the major changes introduced in jQuery 4.0?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery 4.0 introduces several breaking changes and modernizations, including removal of deprecated APIs, dropping support for older browsers, changes to AJAX and script handling, Trusted Types support, and migration of the source code to ES modules.</p>"
+    },
+    {
+        "id": 1422,
+        "title": "Which deprecated APIs were removed in jQuery 4.0?",
+        "category": "jQuery 4",
+        "answer": "<p>Several deprecated APIs were removed, including <code>jQuery.isArray()</code>, <code>jQuery.parseJSON()</code>, <code>jQuery.trim()</code>, <code>jQuery.type()</code>, <code>jQuery.now()</code>, <code>jQuery.isNumeric()</code>, and other previously deprecated APIs.</p>"
+    },
+    {
+        "id": 1423,
+        "title": "Does jQuery 4.0 support Internet Explorer?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery 4.0 supports Internet Explorer 11 but drops support for Internet Explorer 10 and older versions. It also drops support for legacy versions of Microsoft Edge.</p>"
+    },
+    {
+        "id": 1424,
+        "title": "What happened to jQuery.trim() in jQuery 4.0?",
+        "category": "jQuery 4",
+        "answer": "<p><code>jQuery.trim()</code> was removed because modern JavaScript provides the native <code>String.prototype.trim()</code> method. Applications should use <code>value.trim()</code> instead.</p>"
+    },
+    {
+        "id": 1425,
+        "title": "What happened to jQuery.parseJSON() in jQuery 4.0?",
+        "category": "jQuery 4",
+        "answer": "<p><code>jQuery.parseJSON()</code> was removed because JavaScript provides the native <code>JSON.parse()</code> method. Applications should use <code>JSON.parse()</code> instead.</p>"
+    },
+    {
+        "id": 1426,
+        "title": "What happened to jQuery.isArray() in jQuery 4.0?",
+        "category": "jQuery 4",
+        "answer": "<p><code>jQuery.isArray()</code> was removed in jQuery 4.0. Modern JavaScript provides <code>Array.isArray()</code>, which should be used instead.</p>"
+    },
+    {
+        "id": 1427,
+        "title": "What is Trusted Types support in jQuery 4.0?",
+        "category": "jQuery 4",
+        "answer": "<p>Trusted Types is a browser security mechanism that helps prevent DOM-based XSS attacks. jQuery 4.0 adds support for Trusted Types so applications using a suitable Content Security Policy can safely work with trusted HTML values.</p>"
+    },
+    {
+        "id": 1428,
+        "title": "What changes were made to JSONP in jQuery 4.0?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery 4.0 removes automatic promotion of JSON requests to JSONP. Modern applications should generally use CORS for cross-origin API communication instead of relying on JSONP.</p>"
+    },
+    {
+        "id": 1429,
+        "title": "What is jQuery Migrate and why is it useful when upgrading to jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery Migrate helps developers identify deprecated or removed APIs and behavior changes. During migration to jQuery 4, it can provide console warnings that help locate code requiring updates.</p>"
+    },
+    {
+        "id": 1430,
+        "title": "How would you migrate a jQuery 3.x application to jQuery 4.0?",
+        "category": "jQuery 4",
+        "answer": "<p>First identify deprecated APIs and behaviors in the existing application. Upgrade jQuery and use the appropriate jQuery Migrate version during development. Fix migration warnings, update incompatible plugins and application code, thoroughly test the application, and remove jQuery Migrate once the migration is complete.</p>"
+    },
+    {
+        "id": 1431,
+        "title": "Why is jQuery 4.0 considered a breaking release?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery 4.0 is a major version because it removes deprecated APIs, changes certain behaviors, drops support for older browsers, and modifies some AJAX and script-loading behavior. Existing applications may therefore require code changes during migration.</p>"
+    },
+    {
+        "id": 1432,
+        "title": "What happened to jQuery.fx.interval in jQuery 4.0?",
+        "category": "jQuery 4",
+        "answer": "<p><code>jQuery.fx.interval</code> was a deprecated API and was removed in jQuery 4.0. Modern applications can use browser APIs such as <code>requestAnimationFrame()</code> when custom animation timing is required.</p>"
+    },
+    {
+        "id": 1433,
+        "title": "How does jQuery 4.0 improve security?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery 4.0 improves security-related behavior through Trusted Types support and changes to script and AJAX handling. These changes help applications work more safely with modern Content Security Policy requirements and reduce reliance on potentially unsafe legacy behavior.</p>"
+    },
+    {
+        "id": 1434,
+        "title": "What happened to automatic script execution in jQuery 4.0 AJAX requests?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery 4.0 changes script-loading behavior so that scripts are not automatically executed in situations where an explicit script data type is not requested. This makes script execution behavior more explicit and predictable.</p>"
+    },
+    {
+        "id": 1435,
+        "title": "Would you choose jQuery 4.0 for a new React application?",
+        "category": "jQuery 4",
+        "answer": "<p>Generally, I would avoid adding jQuery to a new React application unless there is a specific requirement. React manages the UI through its component and rendering model, while modern JavaScript provides native APIs for many tasks previously handled by jQuery. jQuery 4.0 is more relevant when maintaining existing jQuery applications or integrating with a jQuery-based library.</p>"
+    },
+    {
+        "id": 1436,
+        "title": "What is the difference between jQuery and jQuery UI?",
+        "category": "jQuery",
+        "answer": "<p>jQuery is a JavaScript library primarily used for DOM manipulation, events, AJAX, and effects. jQuery UI is a separate library built on top of jQuery that provides UI widgets, interactions, effects, and themes such as dialogs, date pickers, draggable elements, and sortable lists.</p>"
+    },
+    {
+        "id": 1437,
+        "title": "What is the difference between .remove(), .empty(), and .detach()?",
+        "category": "jQuery",
+        "answer": "<p><code>.remove()</code> removes the selected elements and their associated jQuery data and event handlers. <code>.empty()</code> removes only the child elements. <code>.detach()</code> removes elements from the DOM while preserving their jQuery data and event handlers so they can potentially be reinserted later.</p>"
+    },
+    {
+        "id": 1438,
+        "title": "What is the difference between .hide(), .show(), and .toggle()?",
+        "category": "jQuery",
+        "answer": "<p><code>.hide()</code> hides the selected elements, <code>.show()</code> displays them, and <code>.toggle()</code> switches between the hidden and visible states. jQuery internally manipulates the display state of the elements.</p>"
+    },
+    {
+        "id": 1439,
+        "title": "What is the difference between .fadeIn(), .fadeOut(), and .fadeToggle()?",
+        "category": "jQuery",
+        "answer": "<p><code>.fadeIn()</code> gradually displays an element by changing its opacity, <code>.fadeOut()</code> gradually hides it, and <code>.fadeToggle()</code> switches between the two states using a fading animation.</p>"
+    },
+    {
+        "id": 1440,
+        "title": "How do you check whether an element exists using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can check the <code>length</code> property of the jQuery collection. For example, <code>if ($('#user').length > 0)</code> checks whether an element with the ID <code>user</code> exists in the DOM.</p>"
+    },
+    {
+        "id": 1441,
+        "title": "How do you get the number of elements matched by a jQuery selector?",
+        "category": "jQuery",
+        "answer": "<p>The <code>length</code> property returns the number of elements matched by a jQuery selector. For example, <code>$('.item').length</code> returns the number of elements having the <code>item</code> class.</p>"
+    },
+    {
+        "id": 1442,
+        "title": "What is the difference between .filter() and .find() in jQuery?",
+        "category": "jQuery",
+        "answer": "<p><code>.filter()</code> reduces the current jQuery collection based on a selector or function. <code>.find()</code> searches for matching descendants inside the current elements. Therefore, <code>.filter()</code> works on the current set while <code>.find()</code> searches inside that set.</p>"
+    },
+    {
+        "id": 1443,
+        "title": "How do you retrieve data attributes using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use the <code>.data()</code> method to read values from HTML5 data attributes. For example, <code>$('#user').data('id')</code> can retrieve the value of <code>data-id</code>. jQuery also maintains an internal data cache for values accessed through <code>.data()</code>.</p>"
+    },
+    {
+        "id": 1444,
+        "title": "What is the difference between .data() and .attr() for data attributes?",
+        "category": "jQuery",
+        "answer": "<p><code>.attr('data-id')</code> directly reads the HTML attribute value, while <code>.data('id')</code> reads the associated data value through jQuery's data API. They can behave differently after the attribute is changed because jQuery may cache values accessed through <code>.data()</code>.</p>"
+    },
+    {
+        "id": 1445,
+        "title": "How do you serialize a form using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>The <code>.serialize()</code> method converts successful form controls into a URL-encoded query string. For example, <code>$('#loginForm').serialize()</code> can be used to prepare form data for an AJAX request.</p>"
+    },
+    {
+        "id": 1446,
+        "title": "What is the difference between .serialize() and .serializeArray()?",
+        "category": "jQuery",
+        "answer": "<p><code>.serialize()</code> returns form data as a URL-encoded query string. <code>.serializeArray()</code> returns the form data as an array of objects containing <code>name</code> and <code>value</code> properties.</p>"
+    },
+    {
+        "id": 1447,
+        "title": "How can you abort a jQuery AJAX request?",
+        "category": "jQuery",
+        "answer": "<p>The object returned by <code>$.ajax()</code> is a jqXHR object. You can call its <code>.abort()</code> method to cancel an ongoing AJAX request. For example, <code>const request = $.ajax({...}); request.abort();</code>.</p>"
+    },
+    {
+        "id": 1448,
+        "title": "What is jqXHR in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>jqXHR is the jQuery XMLHttpRequest object returned by jQuery AJAX methods. It provides access to the underlying request and supports methods such as <code>.done()</code>, <code>.fail()</code>, <code>.always()</code>, and <code>.abort()</code>.</p>"
+    },
+    {
+        "id": 1449,
+        "title": "How do you handle AJAX success and failure in modern jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Modern jQuery code can use the Promise-style methods <code>.done()</code> for successful completion, <code>.fail()</code> for errors, and <code>.always()</code> for logic that should run regardless of the result. This is generally clearer than older callback options such as <code>success</code> and <code>error</code>.</p>"
+    },
+    {
+        "id": 1450,
+        "title": "What is event delegation and why is it important for dynamic elements?",
+        "category": "jQuery",
+        "answer": "<p>Event delegation attaches an event handler to a stable ancestor and handles events from matching descendants. It is useful for dynamically created elements because the parent handler can handle events from elements that did not exist when the handler was initially registered.</p>"
+    },
+    {
+        "id": 1451,
+        "title": "What is the difference between event.target and event.currentTarget in jQuery?",
+        "category": "jQuery",
+        "answer": "<p><code>event.target</code> refers to the element where the event originally occurred. <code>event.currentTarget</code> refers to the element whose event handler is currently executing. This distinction is particularly important when using event delegation.</p>"
+    },
+    {
+        "id": 1452,
+        "title": "What is the difference between .trigger() and .triggerHandler()?",
+        "category": "jQuery",
+        "answer": "<p><code>.trigger()</code> triggers an event and allows it to bubble through the DOM. <code>.triggerHandler()</code> invokes the handler for the first matched element without triggering the browser's default action or allowing the event to bubble.</p>"
+    },
+    {
+        "id": 1453,
+        "title": "What changes should developers consider when using AJAX in jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p>Developers should review changes to script and JSONP handling, avoid relying on automatic JSON-to-JSONP promotion, explicitly specify script data types when appropriate, and prefer modern CORS-based APIs for cross-origin communication. Existing AJAX code should be tested carefully during migration.</p>"
+    },
+    {
+        "id": 1454,
+        "title": "How would you replace jQuery.isFunction() in jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p><code>jQuery.isFunction()</code> was removed as part of the cleanup of deprecated APIs. In modern JavaScript, you can check whether a value is a function using <code>typeof value === 'function'</code>.</p>"
+    },
+    {
+        "id": 1455,
+        "title": "How would you replace jQuery.isNumeric() in jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p><code>jQuery.isNumeric()</code> was removed in jQuery 4. The replacement depends on the required definition of numeric input. For a strict number check, <code>typeof value === 'number' && Number.isFinite(value)</code> is appropriate. For strings that should be converted to numbers, <code>Number()</code> combined with an appropriate validation strategy can be used.</p>"
+    },
+    {
+        "id": 1456,
+        "title": "What is the difference between $(this) and this in a jQuery event handler?",
+        "category": "jQuery",
+        "answer": "<p><code>this</code> refers to the DOM element associated with the current event handler, while <code>$(this)</code> wraps that DOM element in a jQuery object so that jQuery methods can be used on it. For example, <code>$(this).hide()</code> hides the current element.</p>"
+    },
+    {
+        "id": 1457,
+        "title": "How do you get the parent, siblings, and next element using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use <code>.parent()</code> to get the immediate parent, <code>.siblings()</code> to get sibling elements, <code>.next()</code> to get the next sibling, and <code>.prev()</code> to get the previous sibling.</p>"
+    },
+    {
+        "id": 1458,
+        "title": "What is the difference between .first(), .last(), and .eq()?",
+        "category": "jQuery",
+        "answer": "<p><code>.first()</code> selects the first element in the collection, <code>.last()</code> selects the last element, and <code>.eq(index)</code> selects an element at a specific zero-based index.</p>"
+    },
+    {
+        "id": 1459,
+        "title": "How do you check or uncheck a checkbox using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Use <code>.prop('checked', true)</code> to check a checkbox and <code>.prop('checked', false)</code> to uncheck it. To read the current state, use <code>.prop('checked')</code>.</p>"
+    },
+    {
+        "id": 1460,
+        "title": "How do you enable or disable a form field using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use the <code>disabled</code> DOM property through <code>.prop()</code>. For example, <code>$('#email').prop('disabled', true)</code> disables the field, while <code>.prop('disabled', false)</code> enables it.</p>"
+    },
+    {
+        "id": 1461,
+        "title": "What is the difference between .css() and .addClass()?",
+        "category": "jQuery",
+        "answer": "<p><code>.css()</code> directly reads or modifies CSS properties on an element. <code>.addClass()</code> adds a CSS class. Using classes is generally preferable for reusable styling because it keeps presentation rules in CSS rather than JavaScript.</p>"
+    },
+    {
+        "id": 1462,
+        "title": "How can you clone an element using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>The <code>.clone()</code> method creates a copy of the selected element. By default, it does not copy the associated event handlers and jQuery data. Passing <code>true</code> can copy event handlers and data as well.</p>"
+    },
+    {
+        "id": 1463,
+        "title": "What is the difference between .clone() and copying HTML with .html()?",
+        "category": "jQuery",
+        "answer": "<p><code>.clone()</code> creates a jQuery copy of the selected DOM elements and can optionally preserve associated data and event handlers. Using <code>.html()</code> copies the HTML representation as a string and does not preserve the original DOM state or event-handler relationships.</p>"
+    },
+    {
+        "id": 1464,
+        "title": "How do you prevent duplicate event handlers in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use event namespaces and remove existing handlers before registering new ones. For example, <code>$(element).off('click.myHandler').on('click.myHandler', handler)</code> ensures that the namespaced handler is not registered repeatedly.</p>"
+    },
+    {
+        "id": 1465,
+        "title": "What are event namespaces in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Event namespaces allow developers to group related event handlers. For example, <code>click.formValidation</code> creates a namespaced event. You can later remove only those handlers using <code>.off('.formValidation')</code> without affecting unrelated click handlers.</p>"
+    },
+    {
+        "id": 1466,
+        "title": "What is the difference between .off() and .unbind()?",
+        "category": "jQuery",
+        "answer": "<p><code>.off()</code> is the modern API for removing event handlers that were attached using <code>.on()</code>. <code>.unbind()</code> is an older deprecated API. Modern jQuery applications should use <code>.on()</code> and <code>.off()</code>.</p>"
+    },
+    {
+        "id": 1467,
+        "title": "How do you debounce an input event using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Debouncing delays execution until the user stops triggering an event for a specified period. A common implementation uses <code>setTimeout()</code> and <code>clearTimeout()</code> inside an input handler. This is useful for search boxes, autocomplete, and API requests.</p>"
+    },
+    {
+        "id": 1468,
+        "title": "How would you implement a live search using jQuery and AJAX?",
+        "category": "jQuery",
+        "answer": "<p>You can listen for the input event, debounce the user's typing, read the input value using <code>.val()</code>, and send the value to the server using <code>$.ajax()</code> or another jQuery AJAX method. The response can then be rendered into the results container using DOM manipulation methods.</p>"
+    },
+    {
+        "id": 1469,
+        "title": "How do you handle dynamically added elements with jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Use event delegation with <code>.on()</code>. Instead of attaching a handler directly to elements that may not exist yet, attach the handler to a stable parent and provide a selector for the dynamic elements.</p>"
+    },
+    {
+        "id": 1470,
+        "title": "What is the difference between jQuery Deferred and native JavaScript Promise?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery Deferred is jQuery's asynchronous abstraction, while Promise is the native JavaScript standard for asynchronous operations. Modern applications should generally prefer native Promises and async/await for new asynchronous code. When migrating older jQuery applications, Deferred-based code should be reviewed carefully.</p>"
+    },
+    {
+        "id": 1471,
+        "title": "How can you replace jQuery.parseXML() or other jQuery utility APIs with native browser APIs?",
+        "category": "jQuery 4",
+        "answer": "<p>Modern JavaScript and browser APIs provide native alternatives for many utility operations. For XML parsing, the browser's <code>DOMParser</code> can be used. The general migration approach is to identify the removed jQuery utility and replace it with the corresponding standard JavaScript or Web API.</p>"
+    },
+    {
+        "id": 1472,
+        "title": "What is the role of jQuery Migrate when upgrading from jQuery 3.x to jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery Migrate helps identify APIs and behaviors that are deprecated or incompatible with the newer jQuery version. A practical migration strategy is to upgrade the application, run it with jQuery Migrate enabled, review the warnings, fix the affected code, test thoroughly, and then remove the migration plugin.</p>"
+    },
+    {
+        "id": 1473,
+        "title": "How would you troubleshoot a jQuery plugin that stops working after upgrading to jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p>First, check the browser console for errors and migration warnings. Then verify whether the plugin depends on APIs removed or changed in jQuery 4. Check the plugin's compatibility documentation, test it with jQuery Migrate, and upgrade or replace the plugin if it is not compatible with jQuery 4.</p>"
+    },
+    {
+        "id": 1474,
+        "title": "What should you consider when using third-party jQuery plugins with jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p>You should verify that the plugin officially supports jQuery 4. Check whether it uses deprecated APIs, removed utilities, old event APIs, or unsupported browser assumptions. For critical applications, test the plugin thoroughly before upgrading production systems.</p>"
+    },
+    {
+        "id": 1475,
+        "title": "As a senior developer, when would you migrate a legacy jQuery application to React instead of upgrading it to jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p>I would consider React when the application requires complex component-based UI, predictable state management, extensive reuse, or significant long-term frontend development. If the existing application is stable and primarily needs maintenance, upgrading to jQuery 4 may be lower risk. The decision should consider business requirements, migration cost, team expertise, application complexity, and long-term maintainability.</p>"
+    },
+    {
+        "id": 1476,
+        "title": "What is the difference between jQuery selectors and CSS selectors?",
+        "category": "jQuery",
+        "answer": "<p>jQuery selectors are largely based on CSS selector syntax, but jQuery also provides additional selector extensions and filtering methods. For example, <code>$('.item')</code> and <code>$('#user')</code> use standard CSS-style selectors, while methods such as <code>:even</code> and <code>:contains()</code> provide jQuery-specific functionality.</p>"
+    },
+    {
+        "id": 1477,
+        "title": "What is the difference between ID, class, attribute, and element selectors in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>An ID selector such as <code>$('#user')</code> selects an element by its ID. A class selector such as <code>$('.user')</code> selects elements by class. An element selector such as <code>$('input')</code> selects elements by tag name. An attribute selector such as <code>$('input[type=\"email\"]')</code> selects elements based on an attribute value.</p>"
+    },
+    {
+        "id": 1478,
+        "title": "What is the difference between .each() and .map() in jQuery?",
+        "category": "jQuery",
+        "answer": "<p><code>.each()</code> is primarily used to iterate over a collection and perform an operation on each element. <code>.map()</code> transforms each item and returns a new collection containing the resulting values. Use <code>.each()</code> for side effects and <code>.map()</code> when you need transformed results.</p>"
+    },
+    {
+        "id": 1479,
+        "title": "How do you retrieve the value of a selected option from a dropdown using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use the <code>.val()</code> method. For example, <code>$('#country').val()</code> returns the value of the currently selected option in the dropdown.</p>"
+    },
+    {
+        "id": 1480,
+        "title": "How do you get the selected option text from a dropdown using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use <code>.find(':selected').text()</code>. For example, <code>$('#country').find(':selected').text()</code> returns the visible text of the selected option.</p>"
+    },
+    {
+        "id": 1481,
+        "title": "How do you submit a form programmatically using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can trigger the submit event using <code>$('#myForm').trigger('submit')</code> or use <code>$('#myForm').submit()</code> in versions where that shorthand is available. If you need to invoke the native form submission behavior without triggering jQuery handlers, use the DOM form's native <code>submit()</code> method.</p>"
+    },
+    {
+        "id": 1482,
+        "title": "How do you validate a form using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can listen for the form's submit event, prevent submission using <code>event.preventDefault()</code>, retrieve field values using <code>.val()</code>, validate the values, and display validation messages using DOM manipulation methods. For larger applications, a dedicated validation library can also be used.</p>"
+    },
+    {
+        "id": 1483,
+        "title": "How do you determine whether a checkbox is selected?",
+        "category": "jQuery",
+        "answer": "<p>Use <code>$(selector).prop('checked')</code>. It returns <code>true</code> when the checkbox is currently checked and <code>false</code> otherwise. The <code>prop()</code> method is preferred because <code>checked</code> represents the current DOM property.</p>"
+    },
+    {
+        "id": 1484,
+        "title": "What is the difference between DOM properties and HTML attributes?",
+        "category": "jQuery",
+        "answer": "<p>HTML attributes represent values defined in the markup, while DOM properties represent the current state of the corresponding DOM object. For example, a checkbox can have a <code>checked</code> attribute in HTML, while its current state is represented by the DOM <code>checked</code> property.</p>"
+    },
+    {
+        "id": 1485,
+        "title": "How do you detect when an AJAX request has completed?",
+        "category": "jQuery",
+        "answer": "<p>For an individual AJAX request, you can use the jqXHR object's <code>.always()</code> method to execute code after either success or failure. For application-wide AJAX activity, jQuery also provides global AJAX event mechanisms.</p>"
+    },
+    {
+        "id": 1486,
+        "title": "What is the difference between synchronous and asynchronous AJAX requests?",
+        "category": "jQuery",
+        "answer": "<p>An asynchronous request allows the browser to continue processing while the request is in progress. A synchronous request blocks JavaScript execution until the request completes. Asynchronous requests are strongly preferred because synchronous network operations can freeze the user interface and provide a poor user experience.</p>"
+    },
+    {
+        "id": 1487,
+        "title": "How do you handle HTTP errors in a jQuery AJAX request?",
+        "category": "jQuery",
+        "answer": "<p>You can use the jqXHR <code>.fail()</code> method to handle failed requests. The callback can inspect the HTTP status, error information, and response data and then display an appropriate message or perform another recovery action.</p>"
+    },
+    {
+        "id": 1488,
+        "title": "What is CORS and why is it important when using jQuery AJAX?",
+        "category": "jQuery",
+        "answer": "<p>CORS, or Cross-Origin Resource Sharing, is a browser security mechanism that controls whether a web page can make requests to a different origin. When a jQuery AJAX request targets another origin, the server must provide the appropriate CORS response headers for the browser to allow the request.</p>"
+    },
+    {
+        "id": 1489,
+        "title": "Why should JSONP generally be avoided in modern applications?",
+        "category": "jQuery",
+        "answer": "<p>JSONP relies on dynamically loaded scripts rather than standard XMLHttpRequest or Fetch-based requests and has security and capability limitations. Modern applications should generally use CORS-enabled APIs for cross-origin requests. jQuery 4 also removes automatic JSON-to-JSONP promotion.</p>"
+    },
+    {
+        "id": 1490,
+        "title": "What is the difference between $.ajax() and the Fetch API?",
+        "category": "jQuery",
+        "answer": "<p><code>$.ajax()</code> is a jQuery API that provides AJAX functionality and returns a jqXHR object. The Fetch API is a native modern browser API that returns standard JavaScript Promises. For new applications, Fetch is often preferred when there is no requirement to depend on jQuery.</p>"
+    },
+    {
+        "id": 1491,
+        "title": "How would you replace jQuery.ajax() with the Fetch API?",
+        "category": "jQuery 4",
+        "answer": "<p>You can replace a basic GET request such as <code>$.ajax()</code> with <code>fetch()</code> and handle the returned Promise using <code>async/await</code>. For example, use <code>const response = await fetch(url)</code>, verify <code>response.ok</code>, and then process the response using <code>response.json()</code>.</p>"
+    },
+    {
+        "id": 1492,
+        "title": "What should you check before upgrading a large application from jQuery 3 to jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p>You should inventory jQuery usage, identify deprecated APIs, check third-party plugin compatibility, review AJAX and script-loading behavior, test browser compatibility, run the application with jQuery Migrate where appropriate, update automated tests, and perform thorough regression testing before production deployment.</p>"
+    },
+    {
+        "id": 1493,
+        "title": "How would you identify deprecated jQuery APIs in a large codebase before upgrading to jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p>I would search the codebase for known deprecated APIs, inspect third-party dependencies, run the application with the appropriate jQuery Migrate tooling, review browser console warnings, and use automated tests to identify affected functionality. I would then replace deprecated APIs with native JavaScript or supported jQuery APIs.</p>"
+    },
+    {
+        "id": 1494,
+        "title": "How would you optimize a large jQuery application during a modernization project?",
+        "category": "jQuery 4",
+        "answer": "<p>I would first identify performance bottlenecks using browser profiling tools. Then I would reduce unnecessary DOM manipulation, cache selectors, use event delegation, debounce expensive events, optimize AJAX calls, reduce unnecessary dependencies, and replace obsolete utility APIs with native browser APIs where appropriate. I would make these changes incrementally and validate performance after each major change.</p>"
+    },
+    {
+        "id": 1495,
+        "title": "How would you migrate a jQuery application to modern JavaScript without rewriting everything at once?",
+        "category": "jQuery 4",
+        "answer": "<p>I would use an incremental migration strategy. First, identify high-value or isolated areas that can be converted safely. Then replace jQuery utilities with native APIs, introduce modern JavaScript modules, gradually replace direct DOM manipulation, and keep existing jQuery functionality working during the transition. Automated tests and clear module boundaries help reduce migration risk.</p>"
+    },
+    {
+        "id": 1496,
+        "title": "What is the difference between .delegate() and .on() in jQuery?",
+        "category": "jQuery",
+        "answer": "<p><code>.delegate()</code> was an older API used for event delegation and has been deprecated. <code>.on()</code> provides the modern approach for both direct event handling and event delegation. For example, <code>$(document).on('click', '.item', handler)</code> can handle clicks on current and dynamically created elements.</p>"
+    },
+    {
+        "id": 1497,
+        "title": "What is the difference between .live() and .on() in jQuery?",
+        "category": "jQuery",
+        "answer": "<p><code>.live()</code> was an older event delegation API that was deprecated and later removed. <code>.on()</code> is the preferred API because it provides more control over the delegation root and event handling. Modern code should use <code>.on()</code>.</p>"
+    },
+    {
+        "id": 1498,
+        "title": "How do you remove a specific event handler in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Use <code>.off()</code> with the same event type, selector, and handler reference used when registering the event. Event namespaces make this easier because a specific group of handlers can be removed without affecting unrelated handlers.</p>"
+    },
+    {
+        "id": 1499,
+        "title": "What is event delegation using a specific container instead of document?",
+        "category": "jQuery",
+        "answer": "<p>Instead of attaching delegated events to <code>document</code>, attach them to the closest stable parent container. For example, <code>$('#userList').on('click', '.delete-btn', handler)</code>. This reduces the scope of event processing and is generally more efficient.</p>"
+    },
+    {
+        "id": 1500,
+        "title": "What is the difference between .closest() and .parents()?",
+        "category": "jQuery",
+        "answer": "<p><code>.closest()</code> searches upward from the current element and returns the first matching ancestor, including the current element if it matches. <code>.parents()</code> searches all ancestors and can return multiple matching elements.</p>"
+    },
+    {
+        "id": 1501,
+        "title": "How do you find the closest parent with a specific class?",
+        "category": "jQuery",
+        "answer": "<p>You can use the <code>.closest()</code> method. For example, <code>$(this).closest('.card')</code> returns the nearest ancestor matching the <code>card</code> class.</p>"
+    },
+    {
+        "id": 1502,
+        "title": "What is the difference between .has() and .find()?",
+        "category": "jQuery",
+        "answer": "<p><code>.find()</code> returns matching descendant elements inside the current collection. <code>.has()</code> filters the current collection and keeps elements that contain at least one matching descendant. Therefore, they operate in different directions.</p>"
+    },
+    {
+        "id": 1503,
+        "title": "What is the difference between .index() and .eq()?",
+        "category": "jQuery",
+        "answer": "<p><code>.eq(index)</code> selects an element at a specified index from a jQuery collection. <code>.index()</code> returns the index position of an element relative to its siblings or another jQuery collection. One selects an element, while the other returns a position.</p>"
+    },
+    {
+        "id": 1504,
+        "title": "How do you sort DOM elements using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can retrieve the elements, convert the collection into an array, use JavaScript's <code>Array.sort()</code>, and then reinsert the sorted elements into the DOM. For example, list items can be sorted based on their text or data attributes.</p>"
+    },
+    {
+        "id": 1505,
+        "title": "How do you check whether an element is visible using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use the jQuery <code>:visible</code> selector or test the element's dimensions and CSS properties. For example, <code>$('#panel').is(':visible')</code> returns whether the selected element is considered visible by jQuery.</p>"
+    },
+    {
+        "id": 1506,
+        "title": "How do you get the width and height of an element using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use <code>.width()</code> and <code>.height()</code> to work with an element's content dimensions. jQuery also provides <code>.innerWidth()</code>, <code>.innerHeight()</code>, <code>.outerWidth()</code>, and <code>.outerHeight()</code> for dimensions that include padding, borders, and optionally margins.</p>"
+    },
+    {
+        "id": 1507,
+        "title": "What is the difference between .width(), .innerWidth(), and .outerWidth()?",
+        "category": "jQuery",
+        "answer": "<p><code>.width()</code> returns the content width. <code>.innerWidth()</code> includes content and padding. <code>.outerWidth()</code> includes content, padding, and border. When called with <code>true</code>, <code>.outerWidth(true)</code> also includes margins.</p>"
+    },
+    {
+        "id": 1508,
+        "title": "How do you get the position of an element relative to its offset parent?",
+        "category": "jQuery",
+        "answer": "<p>The <code>.position()</code> method returns the element's position relative to its offset parent. It is commonly used when positioning elements within a container.</p>"
+    },
+    {
+        "id": 1509,
+        "title": "What is the difference between .position() and .offset()?",
+        "category": "jQuery",
+        "answer": "<p><code>.position()</code> returns the position relative to the element's offset parent. <code>.offset()</code> returns the element's current coordinates relative to the document. Therefore, they are useful for different positioning requirements.</p>"
+    },
+    {
+        "id": 1510,
+        "title": "How do you implement a custom jQuery plugin?",
+        "category": "jQuery",
+        "answer": "<p>A common approach is to add a method to <code>$.fn</code>. For example, <code>$.fn.highlight = function() { return this.addClass('highlight'); };</code> creates a chainable plugin method. A well-designed plugin should support chaining, avoid global variables, and handle multiple matched elements appropriately.</p>"
+    },
+    {
+        "id": 1511,
+        "title": "Why should a custom jQuery plugin return this?",
+        "category": "jQuery",
+        "answer": "<p>Returning <code>this</code> from a jQuery plugin allows method chaining. For example, <code>$('.box').myPlugin().addClass('active')</code> works when the custom plugin returns the original jQuery collection.</p>"
+    },
+    {
+        "id": 1512,
+        "title": "How do you avoid conflicts between jQuery and another library that uses the $ symbol?",
+        "category": "jQuery",
+        "answer": "<p>You can use <code>jQuery.noConflict()</code> to release the <code>$</code> alias. The returned reference or the <code>jQuery</code> name can then be used explicitly. Another common approach is to wrap code in an immediately invoked function and pass jQuery as a parameter.</p>"
+    },
+    {
+        "id": 1513,
+        "title": "What is jQuery.noConflict() and when would you use it?",
+        "category": "jQuery",
+        "answer": "<p><code>jQuery.noConflict()</code> prevents jQuery from using the global <code>$</code> alias, allowing another library to use <code>$</code>. It is useful when multiple JavaScript libraries with conflicting global aliases are loaded on the same page.</p>"
+    },
+    {
+        "id": 1514,
+        "title": "What are the important security considerations when using jQuery HTML manipulation?",
+        "category": "jQuery",
+        "answer": "<p>Developers should avoid inserting untrusted user input directly through methods such as <code>.html()</code>, <code>.append()</code>, or other APIs that interpret HTML. Untrusted data should be treated as text or properly sanitized. Applications should also use Content Security Policy and Trusted Types where appropriate.</p>"
+    },
+    {
+        "id": 1515,
+        "title": "How does jQuery 4 improve the security of HTML manipulation?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery 4 improves compatibility with modern security mechanisms such as Trusted Types and Content Security Policy. This allows applications to establish stronger controls around HTML injection and DOM-based XSS risks. Developers must still avoid passing untrusted HTML directly into DOM-manipulation APIs.</p>"
+    },
+    {
+        "id": 1516,
+        "title": "What is the difference between jQuery's .on() event delegation and native event delegation?",
+        "category": "jQuery",
+        "answer": "<p>Both approaches rely on event bubbling. jQuery's <code>.on()</code> provides a convenient API for registering delegated handlers, while native JavaScript typically uses <code>addEventListener()</code> and checks <code>event.target</code> or uses methods such as <code>closest()</code>. Native event delegation avoids the jQuery dependency, while jQuery provides a concise abstraction.</p>"
+    },
+    {
+        "id": 1517,
+        "title": "What happens when you call a jQuery method on an empty selection?",
+        "category": "jQuery",
+        "answer": "<p>Most jQuery methods safely operate on an empty collection without throwing an error. For example, <code>$('.missing').hide()</code> does nothing because no matching elements exist. This behavior makes jQuery code convenient when elements may or may not be present.</p>"
+    },
+    {
+        "id": 1518,
+        "title": "Why should you cache a jQuery selector?",
+        "category": "jQuery",
+        "answer": "<p>Repeatedly executing the same selector causes unnecessary DOM queries and creates additional jQuery objects. Caching the result allows the same collection to be reused. For example, <code>const $menu = $('#menu')</code> can be reused instead of repeatedly calling <code>$('#menu')</code>.</p>"
+    },
+    {
+        "id": 1519,
+        "title": "What is the difference between $(selector) and document.querySelector()?",
+        "category": "jQuery",
+        "answer": "<p><code>$(selector)</code> returns a jQuery collection that provides jQuery methods and can contain multiple matching elements. <code>document.querySelector()</code> returns the first matching DOM element, while <code>document.querySelectorAll()</code> returns a NodeList containing all matching elements.</p>"
+    },
+    {
+        "id": 1520,
+        "title": "How would you convert a jQuery object into a native DOM element?",
+        "category": "jQuery",
+        "answer": "<p>A jQuery collection can be accessed using an index or the <code>.get()</code> method. For example, <code>$('#user')[0]</code> or <code>$('#user').get(0)</code> returns the underlying DOM element.</p>"
+    },
+    {
+        "id": 1521,
+        "title": "How would you convert a native DOM element into a jQuery object?",
+        "category": "jQuery",
+        "answer": "<p>Pass the DOM element to the jQuery function. For example, <code>const element = document.getElementById('user'); const $element = $(element);</code> creates a jQuery object wrapping the native DOM element.</p>"
+    },
+    {
+        "id": 1522,
+        "title": "What is the difference between .get() and .toArray() in jQuery?",
+        "category": "jQuery",
+        "answer": "<p><code>.get()</code> without an argument converts the entire jQuery collection into a native array, while <code>.get(index)</code> returns the DOM element at a specific index. <code>.toArray()</code> also converts the jQuery collection into a native array of DOM elements.</p>"
+    },
+    {
+        "id": 1523,
+        "title": "How do you stop an AJAX request when a user starts a new search?",
+        "category": "jQuery",
+        "answer": "<p>Store the jqXHR object returned by the previous AJAX request and call <code>.abort()</code> before starting the next request. This prevents unnecessary requests from continuing and can reduce race conditions in autocomplete or live-search functionality.</p>"
+    },
+    {
+        "id": 1524,
+        "title": "How do you prevent race conditions in jQuery AJAX search requests?",
+        "category": "jQuery",
+        "answer": "<p>You can abort the previous request before starting a new one, track a request identifier, or verify that the response belongs to the latest query before updating the UI. Debouncing the input event can also reduce the number of requests.</p>"
+    },
+    {
+        "id": 1525,
+        "title": "How do you send JSON data in a jQuery AJAX POST request?",
+        "category": "jQuery",
+        "answer": "<p>You can use <code>JSON.stringify()</code> to convert the JavaScript object into JSON and specify the appropriate content type. For example, <code>$.ajax({ url: '/api/users', method: 'POST', contentType: 'application/json', data: JSON.stringify(user) })</code>.</p>"
+    },
+    {
+        "id": 1526,
+        "title": "What is the difference between contentType and dataType in jQuery AJAX?",
+        "category": "jQuery",
+        "answer": "<p><code>contentType</code> describes the format of the data being sent to the server, while <code>dataType</code> describes the expected format of the response. For example, <code>contentType: 'application/json'</code> indicates JSON request data, while <code>dataType: 'json'</code> indicates that the response is expected to be JSON.</p>"
+    },
+    {
+        "id": 1527,
+        "title": "How do you configure request headers in jQuery AJAX?",
+        "category": "jQuery",
+        "answer": "<p>You can use the <code>headers</code> option in <code>$.ajax()</code>. For example, <code>headers: { 'Authorization': 'Bearer token' }</code> adds an Authorization header to the request.</p>"
+    },
+    {
+        "id": 1528,
+        "title": "How would you implement a global AJAX loading indicator using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use jQuery's global AJAX events such as <code>ajaxStart</code> and <code>ajaxStop</code> to show and hide a loading indicator. This approach is useful when a common indicator should reflect AJAX activity across the application.</p>"
+    },
+    {
+        "id": 1529,
+        "title": "What is the difference between jQuery's ajaxStart and ajaxStop events?",
+        "category": "jQuery",
+        "answer": "<p><code>ajaxStart</code> is triggered when an AJAX request begins while there are no other active global AJAX requests. <code>ajaxStop</code> is triggered when all active global AJAX requests have completed.</p>"
+    },
+    {
+        "id": 1530,
+        "title": "What is the purpose of the jQuery Migrate plugin when moving to jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery Migrate helps identify deprecated APIs and behavior changes that can affect an application after upgrading. It provides warnings that help developers locate compatibility problems and progressively update legacy code before removing the migration dependency.</p>"
+    },
+    {
+        "id": 1531,
+        "title": "How would you handle a jQuery plugin that depends on a removed API in jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p>First, identify the removed API used by the plugin. Then check whether a newer plugin version supports jQuery 4. If an updated version is unavailable, evaluate whether the plugin can be patched safely, replace it with a maintained alternative, or isolate the legacy dependency until it can be migrated.</p>"
+    },
+    {
+        "id": 1532,
+        "title": "Why should a jQuery 4 migration include automated regression tests?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery 4 contains breaking changes that can affect existing application behavior and third-party plugins. Automated tests help verify important workflows such as forms, AJAX requests, event handling, dynamic UI components, and DOM manipulation after the upgrade.</p>"
+    },
+    {
+        "id": 1533,
+        "title": "How would you safely roll back a jQuery 4 migration if production issues occur?",
+        "category": "jQuery 4",
+        "answer": "<p>I would keep the migration isolated in version control, use a deployable artifact containing the previous jQuery version, monitor production errors, and have a rollback procedure ready before deployment. If a critical issue occurs, the application can be restored to the known-good version while the compatibility problem is investigated.</p>"
+    },
+    {
+        "id": 1534,
+        "title": "How can you identify whether a jQuery 4 issue is caused by core jQuery or a third-party plugin?",
+        "category": "jQuery 4",
+        "answer": "<p>Start by reproducing the issue with the plugin disabled. Check the browser console and jQuery Migrate warnings, inspect the plugin's source for deprecated APIs, and test the same operation using a minimal jQuery example. If the problem disappears when the plugin is removed, the plugin is a strong candidate for the incompatibility.</p>"
+    },
+    {
+        "id": 1535,
+        "title": "As a lead developer, how would you plan a jQuery 4 migration for a large enterprise application?",
+        "category": "jQuery 4",
+        "answer": "<p>I would begin with an application and dependency inventory, identify deprecated APIs and unsupported plugins, establish automated regression coverage, and create a migration branch. I would upgrade incrementally, use migration tooling to identify compatibility issues, validate critical business workflows, test supported browsers, measure performance, and deploy gradually with monitoring and a rollback plan.</p>"
+    },
+    {
+        "id": 1536,
+        "title": "What is the difference between jQuery's .ready() and native DOMContentLoaded?",
+        "category": "jQuery",
+        "answer": "<p><code>$(document).ready()</code> is jQuery's abstraction for executing code when the DOM is ready. Native JavaScript provides the <code>DOMContentLoaded</code> event for the same general purpose. Modern applications can use <code>DOMContentLoaded</code> when jQuery is not otherwise required.</p>"
+    },
+    {
+        "id": 1537,
+        "title": "How do you execute code when the DOM is ready in modern jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use <code>$(function() { ... })</code>, which is a concise form of jQuery's DOM-ready handling. It executes the callback when the DOM is ready without requiring you to explicitly reference <code>$(document)</code>.</p>"
+    },
+    {
+        "id": 1538,
+        "title": "What is the difference between .append() and .appendTo()?",
+        "category": "jQuery",
+        "answer": "<p><code>.append()</code> is called on the target container and receives the content to insert. <code>.appendTo()</code> is called on the content and receives the target container. For example, <code>$('#list').append(item)</code> and <code>item.appendTo('#list')</code> express the same basic operation from opposite directions.</p>"
+    },
+    {
+        "id": 1539,
+        "title": "What is the difference between .prepend() and .prependTo()?",
+        "category": "jQuery",
+        "answer": "<p><code>.prepend()</code> inserts content at the beginning of the selected target element, while <code>.prependTo()</code> inserts the selected content into the beginning of the specified target. The difference is mainly which object the method is called on.</p>"
+    },
+    {
+        "id": 1540,
+        "title": "What is the difference between .replaceWith() and .replaceAll()?",
+        "category": "jQuery",
+        "answer": "<p><code>.replaceWith()</code> replaces each selected element with the specified content. <code>.replaceAll()</code> performs the same type of replacement but is called on the replacement content and receives the target selector. They represent the same operation from opposite directions.</p>"
+    },
+    {
+        "id": 1541,
+        "title": "How do you wrap an element using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>The <code>.wrap()</code> method wraps each selected element with the specified HTML structure. For example, <code>$('.item').wrap('&lt;div class=\"wrapper\"&gt;&lt;/div&gt;')</code> places each matching element inside a new wrapper.</p>"
+    },
+    {
+        "id": 1542,
+        "title": "What is the difference between .wrap(), .wrapAll(), and .unwrap()?",
+        "category": "jQuery",
+        "answer": "<p><code>.wrap()</code> creates a separate wrapper around each matched element. <code>.wrapAll()</code> places all matched elements inside a single wrapper. <code>.unwrap()</code> removes the parent wrapper while keeping the selected elements.</p>"
+    },
+    {
+        "id": 1543,
+        "title": "How do you add an attribute to an element using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Use the <code>.attr()</code> method. For example, <code>$('#link').attr('title', 'Open profile')</code> adds or updates the <code>title</code> attribute. For DOM properties such as <code>disabled</code> or <code>checked</code>, <code>.prop()</code> is generally more appropriate.</p>"
+    },
+    {
+        "id": 1544,
+        "title": "How do you remove an attribute using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>The <code>.removeAttr()</code> method removes an HTML attribute. For example, <code>$('#email').removeAttr('readonly')</code> removes the <code>readonly</code> attribute. For boolean DOM properties, use <code>.prop()</code> to change the current state.</p>"
+    },
+    {
+        "id": 1545,
+        "title": "How do you remove a property or reset a boolean state using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>For boolean DOM properties, use <code>.prop()</code> to explicitly set the desired state. For example, <code>$('#submit').prop('disabled', false)</code> enables a button. Removing an HTML attribute is a separate operation and should use <code>.removeAttr()</code> when appropriate.</p>"
+    },
+    {
+        "id": 1546,
+        "title": "How do you get and set the scroll position using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>The <code>.scrollTop()</code> method gets or sets the vertical scroll position, while <code>.scrollLeft()</code> handles horizontal scrolling. For example, <code>$(window).scrollTop(0)</code> moves the page to the top.</p>"
+    },
+    {
+        "id": 1547,
+        "title": "How do you detect window resize events using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can register a resize handler using <code>$(window).on('resize', handler)</code>. Because resize events can fire frequently, expensive operations should usually be throttled or debounced to avoid unnecessary processing.</p>"
+    },
+    {
+        "id": 1548,
+        "title": "How do you throttle a scroll event in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Throttling limits how frequently an event handler can execute. A common approach is to use a timestamp or a scheduled callback so that expensive scroll-related logic runs at a controlled frequency instead of on every scroll event.</p>"
+    },
+    {
+        "id": 1549,
+        "title": "What is the difference between throttling and debouncing in jQuery applications?",
+        "category": "jQuery",
+        "answer": "<p>Debouncing waits until events stop occurring for a specified period before executing the function. Throttling allows execution at most once during a specified interval. Debouncing is commonly used for search inputs, while throttling is useful for scroll and resize events.</p>"
+    },
+    {
+        "id": 1550,
+        "title": "How do you use jQuery to read a CSS custom property?",
+        "category": "jQuery",
+        "answer": "<p>You can use the <code>.css()</code> method with the custom property name. For example, <code>$('.card').css('--primary-color')</code> can retrieve the computed value of a CSS custom property supported by the browser.</p>"
+    },
+    {
+        "id": 1551,
+        "title": "How would you replace jQuery's DOM manipulation with modern browser APIs?",
+        "category": "jQuery 4",
+        "answer": "<p>Common replacements include <code>querySelector()</code> and <code>querySelectorAll()</code> for selection, <code>classList</code> for classes, <code>textContent</code> for text, <code>insertAdjacentHTML()</code> or DOM methods for insertion, and <code>addEventListener()</code> for events. The appropriate API depends on the required behavior and security considerations.</p>"
+    },
+    {
+        "id": 1552,
+        "title": "How would you replace jQuery's event handling with modern JavaScript?",
+        "category": "jQuery 4",
+        "answer": "<p>Use <code>addEventListener()</code> to register handlers and <code>removeEventListener()</code> to remove them. Event delegation can be implemented by registering one handler on a stable ancestor and checking <code>event.target</code> or using <code>closest()</code>.</p>"
+    },
+    {
+        "id": 1553,
+        "title": "How would you replace jQuery's class manipulation with modern JavaScript?",
+        "category": "jQuery 4",
+        "answer": "<p>Modern JavaScript provides the <code>classList</code> API. For example, <code>element.classList.add('active')</code>, <code>element.classList.remove('active')</code>, and <code>element.classList.toggle('active')</code> provide functionality similar to jQuery's class methods.</p>"
+    },
+    {
+        "id": 1554,
+        "title": "How would you replace jQuery's AJAX functionality in a modern application?",
+        "category": "jQuery 4",
+        "answer": "<p>The native Fetch API is the primary modern replacement for jQuery AJAX. It uses Promises and works naturally with <code>async/await</code>. During modernization, developers should also consider request cancellation with <code>AbortController</code>, response validation, error handling, authentication, and CORS.</p>"
+    },
+    {
+        "id": 1555,
+        "title": "What is AbortController and how is it useful when replacing jQuery AJAX?",
+        "category": "jQuery 4",
+        "answer": "<p><code>AbortController</code> provides a standard way to cancel operations such as Fetch requests. When replacing jQuery AJAX, it can provide functionality similar to aborting an in-progress jqXHR request. For example, an <code>AbortSignal</code> can be passed to <code>fetch()</code> and the controller can later call <code>abort()</code>.</p>"
+    },
+    {
+        "id": 1556,
+        "title": "What is the difference between jQuery's .on() and native addEventListener()?",
+        "category": "jQuery",
+        "answer": "<p><code>.on()</code> is jQuery's event registration API, while <code>addEventListener()</code> is the native browser API. jQuery provides convenient event delegation and a normalized event object, whereas <code>addEventListener()</code> provides native browser functionality without requiring the jQuery library.</p>"
+    },
+    {
+        "id": 1557,
+        "title": "How do you handle keyboard events using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use <code>.on()</code> with keyboard events such as <code>keydown</code>, <code>keyup</code>, and <code>keypress</code>. For example, <code>$('#search').on('keydown', function(event) { ... })</code> can handle keyboard input. Modern applications should generally prefer <code>keydown</code> or <code>keyup</code> over the deprecated <code>keypress</code> event.</p>"
+    },
+    {
+        "id": 1558,
+        "title": "How do you detect the Enter key in a jQuery event handler?",
+        "category": "jQuery",
+        "answer": "<p>You can inspect the keyboard event's <code>key</code> property. For example, <code>if (event.key === 'Enter') { ... }</code> detects the Enter key. Using <code>event.key</code> is clearer than relying on numeric key codes.</p>"
+    },
+    {
+        "id": 1559,
+        "title": "How do you stop a form from submitting using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Handle the form's submit event and call <code>event.preventDefault()</code>. For example, <code>$('#loginForm').on('submit', function(event) { event.preventDefault(); });</code> prevents the browser's default form submission.</p>"
+    },
+    {
+        "id": 1560,
+        "title": "What is the difference between preventDefault() and stopPropagation()?",
+        "category": "jQuery",
+        "answer": "<p><code>preventDefault()</code> prevents the browser's default action, such as following a link or submitting a form. <code>stopPropagation()</code> prevents the event from continuing to propagate through the DOM. They solve different problems and can be used independently.</p>"
+    },
+    {
+        "id": 1561,
+        "title": "What does return false mean in a jQuery event handler?",
+        "category": "jQuery",
+        "answer": "<p>When used as the return value of a jQuery event handler, <code>return false</code> prevents the default action and stops event propagation. Explicitly calling <code>event.preventDefault()</code> and <code>event.stopPropagation()</code> is often clearer because it makes the intended behavior explicit.</p>"
+    },
+    {
+        "id": 1562,
+        "title": "How do you create a reusable AJAX utility using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Create a function that accepts parameters such as URL, HTTP method, request data, and headers, then internally calls <code>$.ajax()</code>. The function can return the jqXHR object so callers can attach <code>.done()</code>, <code>.fail()</code>, and <code>.always()</code> handlers.</p>"
+    },
+    {
+        "id": 1563,
+        "title": "What is $.ajaxSetup() and when should it be used?",
+        "category": "jQuery",
+        "answer": "<p><code>$.ajaxSetup()</code> configures default settings for subsequent jQuery AJAX requests. It can be useful for shared configuration such as common headers or options, but it should be used carefully because global settings can affect unrelated AJAX calls and make debugging more difficult.</p>"
+    },
+    {
+        "id": 1564,
+        "title": "How do you add a common Authorization header to jQuery AJAX requests?",
+        "category": "jQuery",
+        "answer": "<p>You can configure the header for individual requests using the <code>headers</code> option. For application-wide behavior, a shared AJAX configuration or request wrapper can be used. Sensitive credentials should be handled carefully and should not be exposed unnecessarily in client-side code.</p>"
+    },
+    {
+        "id": 1565,
+        "title": "How do you handle multiple AJAX requests in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can keep the jqXHR objects returned by individual requests and coordinate them using appropriate Promise-style mechanisms. For independent requests, each can have its own success and failure handling. For requests that must all complete before continuing, a coordinated Promise-based approach can be used.</p>"
+    },
+    {
+        "id": 1566,
+        "title": "What is the purpose of $.when() in jQuery?",
+        "category": "jQuery",
+        "answer": "<p><code>$.when()</code> was traditionally used to coordinate multiple jQuery Deferred or Promise-like operations. It can execute a callback after multiple asynchronous operations have completed. In modern applications, native <code>Promise.all()</code> is generally preferred for coordinating standard Promises.</p>"
+    },
+    {
+        "id": 1567,
+        "title": "How would you replace $.when() with modern JavaScript?",
+        "category": "jQuery 4",
+        "answer": "<p>For standard JavaScript Promises, <code>Promise.all()</code> is the common replacement. It waits for all supplied Promises to fulfill and returns their results. For example, <code>const results = await Promise.all([request1, request2]);</code> can coordinate multiple asynchronous operations.</p>"
+    },
+    {
+        "id": 1568,
+        "title": "How do you handle an AJAX request timeout in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>The AJAX <code>timeout</code> option specifies how long the request can remain pending before jQuery treats it as failed. The failure handler can inspect the error information and provide appropriate retry or error behavior.</p>"
+    },
+    {
+        "id": 1569,
+        "title": "How would you implement retry logic for a failed jQuery AJAX request?",
+        "category": "jQuery",
+        "answer": "<p>You can wrap the AJAX request in a function that tracks the retry count and invokes the function again after a failure, usually with a delay. A production implementation should use a maximum retry count, exponential backoff, and should avoid retrying errors that are not transient.</p>"
+    },
+    {
+        "id": 1570,
+        "title": "What is the difference between HTTP status 401 and 403 when handling AJAX errors?",
+        "category": "jQuery",
+        "answer": "<p>HTTP <code>401</code> generally indicates that authentication is required or the supplied credentials are invalid. HTTP <code>403</code> indicates that the server understood the request but refuses to authorize it. A frontend application can use these statuses to distinguish authentication problems from authorization problems.</p>"
+    },
+    {
+        "id": 1571,
+        "title": "How can you prevent XSS when using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Avoid inserting untrusted strings as HTML using methods such as <code>.html()</code>. Use <code>.text()</code> when the content should be treated as plain text, validate and sanitize untrusted HTML when HTML is genuinely required, and use appropriate Content Security Policy and Trusted Types controls.</p>"
+    },
+    {
+        "id": 1572,
+        "title": "What is the security risk of using .html() with user-provided data?",
+        "category": "jQuery",
+        "answer": "<p>If untrusted input is inserted directly as HTML, an attacker may be able to inject malicious markup or script-related content, potentially leading to cross-site scripting. When displaying user-provided text, <code>.text()</code> is safer because it treats the value as text rather than HTML.</p>"
+    },
+    {
+        "id": 1573,
+        "title": "How does Trusted Types relate to jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p>Trusted Types is a browser security mechanism designed to reduce DOM-based XSS by requiring certain DOM sinks to receive trusted values. jQuery 4 includes changes that improve compatibility with Trusted Types, allowing applications that enforce suitable Content Security Policies to use jQuery more safely.</p>"
+    },
+    {
+        "id": 1574,
+        "title": "What is Content Security Policy and why is it important for a jQuery application?",
+        "category": "jQuery 4",
+        "answer": "<p>Content Security Policy, or CSP, is a browser security mechanism that restricts which scripts, resources, and other content a page can execute or load. It can reduce the impact of XSS vulnerabilities. When modernizing a jQuery application, CSP compatibility should be considered alongside Trusted Types and script-loading behavior.</p>"
+    },
+    {
+        "id": 1575,
+        "title": "As a senior developer, how would you decide between upgrading jQuery 3 to jQuery 4 and removing jQuery completely?",
+        "category": "jQuery 4",
+        "answer": "<p>I would evaluate the application's size, dependency on jQuery plugins, migration effort, browser requirements, team skills, performance goals, and long-term maintenance plans. If the application heavily depends on jQuery, upgrading to jQuery 4 may be the lower-risk option. If jQuery usage is limited and the application is already being modernized, gradually replacing it with native APIs or a modern framework may provide greater long-term value.</p>"
+    },
+    {
+        "id": 1576,
+        "title": "What is the difference between jQuery's .load(), .get(), and $.ajax()?",
+        "category": "jQuery",
+        "answer": "<p><code>.load()</code> is a convenience method that loads HTML from a server and inserts it into the selected elements. <code>$.get()</code> performs a GET request and returns the response for further processing. <code>$.ajax()</code> provides the most configuration options, including HTTP method, headers, timeout, content type, data type, and callbacks.</p>"
+    },
+    {
+        "id": 1577,
+        "title": "How do you load HTML dynamically using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use the <code>.load()</code> method to retrieve HTML from a server and insert it into a selected element. For example, <code>$('#content').load('/users.html')</code> loads the response into the <code>content</code> element. When loading untrusted content, security and response validation should be considered.</p>"
+    },
+    {
+        "id": 1578,
+        "title": "What is the difference between .html(), .text(), and .load()?",
+        "category": "jQuery",
+        "answer": "<p><code>.html()</code> reads or writes HTML content, <code>.text()</code> reads or writes plain text, and <code>.load()</code> retrieves content from a server and inserts the returned HTML into the selected elements. Use <code>.text()</code> when user-controlled data should be treated as plain text.</p>"
+    },
+    {
+        "id": 1579,
+        "title": "How do you implement pagination with jQuery and AJAX?",
+        "category": "jQuery",
+        "answer": "<p>Maintain the current page number, send it to the server through an AJAX request, render the returned records into the table or list, and update the pagination controls. Event delegation can be used for dynamically generated pagination buttons, and duplicate requests can be prevented while a request is in progress.</p>"
+    },
+    {
+        "id": 1580,
+        "title": "How do you prevent multiple form submissions using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Disable the submit button immediately after the form is submitted and re-enable it after the request completes. For example, the button can be disabled before starting the AJAX request and restored in the <code>always()</code> callback. Server-side idempotency should also be considered for critical operations.</p>"
+    },
+    {
+        "id": 1581,
+        "title": "How do you implement a loading spinner during a jQuery AJAX request?",
+        "category": "jQuery",
+        "answer": "<p>Show the spinner immediately before starting the request and hide it when the request completes. For an individual request, <code>beforeSend</code> can show the spinner and <code>always()</code> can hide it. This ensures the spinner is removed after both successful and failed requests.</p>"
+    },
+    {
+        "id": 1582,
+        "title": "How do you handle empty AJAX responses in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Check whether the response contains the expected data before updating the UI. The application should distinguish between an empty successful response and an actual request failure. Appropriate empty-state messaging can then be displayed to the user.</p>"
+    },
+    {
+        "id": 1583,
+        "title": "How do you prevent unnecessary DOM manipulation in a jQuery application?",
+        "category": "jQuery",
+        "answer": "<p>Cache selectors, avoid repeatedly querying the DOM, build content before inserting it, batch multiple updates, minimize layout-triggering operations, and update only the elements that actually changed. Event delegation can also reduce the number of event handlers attached to individual elements.</p>"
+    },
+    {
+        "id": 1584,
+        "title": "What is document fragment usage and how can it improve jQuery performance?",
+        "category": "jQuery",
+        "answer": "<p>A DocumentFragment allows multiple DOM nodes to be assembled outside the live document before being inserted. This can reduce repeated DOM updates and layout work. In jQuery applications, content can also be constructed in memory and inserted in a single operation when practical.</p>"
+    },
+    {
+        "id": 1585,
+        "title": "How do you find elements based on their data attributes using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use CSS attribute selectors such as <code>$('[data-user-id=\"123\"]')</code> to match elements based on an attribute value. You can also use <code>.filter()</code> or <code>.data()</code> when more programmatic filtering is required.</p>"
+    },
+    {
+        "id": 1586,
+        "title": "What is the difference between .removeData() and .removeAttr()?",
+        "category": "jQuery",
+        "answer": "<p><code>.removeData()</code> removes data associated with an element through jQuery's data API. <code>.removeAttr()</code> removes an HTML attribute from the DOM element. They operate on different types of stored information and should not be treated as interchangeable.</p>"
+    },
+    {
+        "id": 1587,
+        "title": "How do you store custom application data on a DOM element using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>The <code>.data()</code> method can associate application data with a DOM element without adding custom JavaScript properties directly to the element. For example, <code>$('#user').data('userId', 123)</code> stores a value that can later be retrieved using <code>.data('userId')</code>.</p>"
+    },
+    {
+        "id": 1588,
+        "title": "What is the difference between jQuery's .data() and JavaScript WeakMap?",
+        "category": "jQuery",
+        "answer": "<p>jQuery's <code>.data()</code> provides a convenient API for associating data with DOM elements. A JavaScript <code>WeakMap</code> provides a native mechanism for associating object keys with values without preventing garbage collection of those keys. For modern applications, WeakMap can be useful when managing private metadata associated with objects.</p>"
+    },
+    {
+        "id": 1589,
+        "title": "How do you implement lazy loading of images using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>A legacy approach is to store the actual image URL in a data attribute and assign it to <code>src</code> when the image approaches the viewport. In modern applications, the native <code>loading=\"lazy\"</code> attribute or <code>IntersectionObserver</code> is generally preferred because browsers provide built-in support for efficient lazy loading.</p>"
+    },
+    {
+        "id": 1590,
+        "title": "How would you use IntersectionObserver instead of a jQuery scroll handler?",
+        "category": "jQuery 4",
+        "answer": "<p><code>IntersectionObserver</code> allows the browser to notify the application when an element enters or leaves the viewport. It avoids continuously processing scroll events and is generally more efficient for lazy loading, visibility tracking, and infinite scrolling.</p>"
+    },
+    {
+        "id": 1591,
+        "title": "How do you implement infinite scrolling with jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Listen for scroll events, determine whether the user is approaching the bottom of the page, and request the next batch of data through AJAX. The implementation should throttle or debounce scroll processing, prevent duplicate requests, maintain the current page or cursor, and append the new records to the DOM.</p>"
+    },
+    {
+        "id": 1592,
+        "title": "What modern browser API can replace jQuery-based infinite-scroll detection?",
+        "category": "jQuery 4",
+        "answer": "<p><code>IntersectionObserver</code> can be used to detect when a sentinel element near the bottom of a list enters the viewport. This avoids manually calculating scroll positions and can provide a cleaner and more efficient implementation.</p>"
+    },
+    {
+        "id": 1593,
+        "title": "How would you debug a memory leak in a jQuery application?",
+        "category": "jQuery",
+        "answer": "<p>I would use browser developer tools to inspect heap snapshots, retained DOM nodes, event listeners, timers, and detached elements. I would check whether event handlers are repeatedly registered, whether large objects remain referenced, and whether timers or subscriptions are properly cleaned up.</p>"
+    },
+    {
+        "id": 1594,
+        "title": "How can excessive event handlers cause performance problems in jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Attaching individual handlers to thousands of elements increases memory usage and event-processing overhead. Event delegation can reduce the number of handlers by placing one handler on a stable ancestor. Namespaces and proper cleanup with <code>.off()</code> also help prevent duplicate handlers.</p>"
+    },
+    {
+        "id": 1595,
+        "title": "How would you modernize a legacy jQuery application while keeping the existing functionality stable?",
+        "category": "jQuery 4",
+        "answer": "<p>I would first establish automated tests and baseline performance metrics, then inventory jQuery APIs and third-party plugins. Next, I would migrate deprecated APIs, upgrade compatible plugins, and introduce native browser APIs incrementally. I would isolate legacy jQuery code behind clear modules, validate each migration step with regression testing, and gradually reduce the application's dependency on jQuery rather than performing a risky full rewrite.</p>"
+    },
+    {
+        "id": 1596,
+        "title": "What is the difference between .each() on a jQuery collection and $.each()?",
+        "category": "jQuery",
+        "answer": "<p><code>.each()</code> is called on a jQuery collection and iterates over the matched DOM elements. <code>$.each()</code> is a utility method that can iterate over arrays, array-like objects, and plain objects. The callback arguments and the type of collection being iterated should be considered when choosing between them.</p>"
+    },
+    {
+        "id": 1597,
+        "title": "How can you break out of a jQuery .each() loop?",
+        "category": "jQuery",
+        "answer": "<p>Return <code>false</code> from the callback to stop the current jQuery <code>.each()</code> iteration. Returning <code>true</code> is equivalent to continuing to the next iteration.</p>"
+    },
+    {
+        "id": 1598,
+        "title": "What is the difference between returning false and returning true inside $.each()?",
+        "category": "jQuery",
+        "answer": "<p>Inside jQuery's iteration utilities, returning <code>false</code> stops the iteration, while returning <code>true</code> skips the remainder of the current iteration and continues with the next item. This behavior is specific to the jQuery iteration callback.</p>"
+    },
+    {
+        "id": 1599,
+        "title": "How do you determine whether an element has a specific attribute using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use <code>.is('[attribute]')</code> or check the result of <code>.attr()</code>. For example, <code>$('#email').is('[required]')</code> checks whether the element has a <code>required</code> attribute.</p>"
+    },
+    {
+        "id": 1600,
+        "title": "How do you select all checked checkboxes using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Use the <code>:checked</code> selector. For example, <code>$('input[type=\"checkbox\"]:checked')</code> returns all currently checked checkboxes.</p>"
+    },
+    {
+        "id": 1601,
+        "title": "How do you select all enabled or disabled form controls using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>jQuery provides the <code>:enabled</code> and <code>:disabled</code> selectors. For example, <code>$('input:disabled')</code> selects disabled input elements, while <code>$('input:enabled')</code> selects enabled inputs.</p>"
+    },
+    {
+        "id": 1602,
+        "title": "What is the difference between :checked and the checked attribute?",
+        "category": "jQuery",
+        "answer": "<p><code>:checked</code> evaluates the current checked state of a checkbox or radio button. The HTML <code>checked</code> attribute represents the initial markup state. Therefore, the attribute and current DOM property can differ after the user changes the control.</p>"
+    },
+    {
+        "id": 1603,
+        "title": "How do you find duplicate values in a set of input fields using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can iterate over the input fields, read their values using <code>.val()</code>, and maintain a JavaScript <code>Set</code> or object to track values already encountered. If a value already exists in the collection, it can be identified as a duplicate.</p>"
+    },
+    {
+        "id": 1604,
+        "title": "How would you implement client-side form validation without a jQuery validation plugin?",
+        "category": "jQuery",
+        "answer": "<p>I would listen for the submit event, retrieve field values, validate required fields and formats, display error messages, and prevent submission when validation fails. HTML5 validation APIs such as <code>checkValidity()</code> can also be combined with jQuery for DOM updates and event handling.</p>"
+    },
+    {
+        "id": 1605,
+        "title": "How do you reset a form using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can call the native form's <code>reset()</code> method. For example, <code>$('#userForm')[0].reset()</code> resets the controls to their initial values. jQuery itself does not provide a dedicated reset API that replaces the native form reset behavior.</p>"
+    },
+    {
+        "id": 1606,
+        "title": "How do you focus an input field using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>You can use the <code>.trigger('focus')</code> approach or access the native DOM element and call <code>focus()</code>. For example, <code>$('#email')[0].focus()</code> directly invokes the native browser focus behavior.</p>"
+    },
+    {
+        "id": 1607,
+        "title": "How do you detect changes to an input value using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Use the <code>change</code> event for committed changes, or the <code>input</code> event when you need to react as the value changes while the user is typing. For example, <code>$('#search').on('input', handler)</code> is appropriate for live search functionality.</p>"
+    },
+    {
+        "id": 1608,
+        "title": "What is the difference between the input and change events?",
+        "category": "jQuery",
+        "answer": "<p>The <code>input</code> event fires when the value changes as the user interacts with the control. The <code>change</code> event generally fires when the change is committed, with behavior depending on the form control. For real-time text input processing, <code>input</code> is usually more appropriate.</p>"
+    },
+    {
+        "id": 1609,
+        "title": "How do you implement autocomplete using jQuery?",
+        "category": "jQuery",
+        "answer": "<p>Listen for the input event, debounce the user's typing, send the current query to an API, render the returned suggestions, and handle keyboard and mouse selection. The previous request can be aborted when a new query starts to prevent stale responses from overwriting newer results.</p>"
+    },
+    {
+        "id": 1610,
+        "title": "How would you prevent stale autocomplete responses from updating the UI?",
+        "category": "jQuery",
+        "answer": "<p>Abort the previous jqXHR request before starting a new request or associate each request with a sequence number. Before rendering a response, verify that it belongs to the latest query. This prevents an older, slower response from overwriting newer search results.</p>"
+    },
+    {
+        "id": 1611,
+        "title": "What is the difference between jQuery 3.x and jQuery 4.x from a migration perspective?",
+        "category": "jQuery 4",
+        "answer": "<p>jQuery 4.x removes several deprecated APIs and changes certain legacy behaviors. It also modernizes browser and security support and changes aspects of AJAX and script handling. Applications moving from 3.x should review deprecated API usage, third-party plugin compatibility, browser requirements, and automated tests before upgrading.</p>"
+    },
+    {
+        "id": 1612,
+        "title": "What is the recommended strategy for handling deprecated jQuery APIs during a jQuery 4 migration?",
+        "category": "jQuery 4",
+        "answer": "<p>Identify deprecated APIs using documentation, code searches, migration tooling, and runtime warnings. Replace them with supported jQuery APIs or native JavaScript alternatives, add regression tests for affected behavior, and remove the deprecated usage before completing the migration.</p>"
+    },
+    {
+        "id": 1613,
+        "title": "How would you replace jQuery utility functions with modern JavaScript?",
+        "category": "jQuery 4",
+        "answer": "<p>Use native JavaScript APIs where appropriate. For example, use <code>Array.isArray()</code> instead of jQuery's array utility, <code>JSON.parse()</code> instead of jQuery JSON parsing utilities, <code>String.prototype.trim()</code> instead of jQuery trimming utilities, and <code>typeof value === 'function'</code> for function checks.</p>"
+    },
+    {
+        "id": 1614,
+        "title": "Why should third-party jQuery plugins be audited before upgrading to jQuery 4?",
+        "category": "jQuery 4",
+        "answer": "<p>Third-party plugins may depend on deprecated or removed jQuery APIs, legacy browser behavior, or changed AJAX and event behavior. An audit helps identify incompatible dependencies early so they can be upgraded, patched, replaced, or isolated before the production migration.</p>"
+    },
+    {
+        "id": 1615,
+        "title": "How would you measure the success of a jQuery 4 migration?",
+        "category": "jQuery 4",
+        "answer": "<p>I would measure functional correctness, automated test results, browser compatibility, JavaScript errors, page-load performance, bundle size, runtime performance, and production error rates. I would also verify that deprecated API warnings have been eliminated and that critical user journeys continue to work correctly.</p>"
+    }
+]
