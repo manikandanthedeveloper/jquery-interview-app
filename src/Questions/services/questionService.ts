@@ -3,7 +3,7 @@ import type IQuestion from "../types/index";
 
 export const fetchQuestions = async (): Promise<IQuestion[]> => {
 	try {
-		const response = await fetch("./data/react.json");
+		const response = await fetch("./data/jquery.json");
 
 		if (!response.ok) {
 			throw new Error("Unable to fetch questions");
