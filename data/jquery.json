@@ -1,5 +1,365 @@
 [
     {
+        "id": 1,
+        "title": "What is jQuery, and why was it widely used?",
+        "category": "jQuery Fundamentals",
+        "answer": "<p>jQuery is a JavaScript library that simplifies DOM manipulation, event handling, AJAX communication, animations, and cross-browser compatibility.</p><p>It became popular because it provided a consistent API across browsers and reduced the amount of JavaScript code developers needed to write. For new applications, I would generally prefer native JavaScript or modern frameworks such as React, but jQuery is still relevant when maintaining legacy applications.</p>"
+    },
+    {
+        "id": 2,
+        "title": "What is the difference between JavaScript and jQuery?",
+        "category": "jQuery Fundamentals",
+        "answer": "<p>JavaScript is a programming language, whereas jQuery is a JavaScript library built on top of JavaScript.</p><p>jQuery provides convenient APIs for common operations such as DOM manipulation, event handling, and AJAX. It helps developers accomplish common tasks with less code, but it does not replace JavaScript.</p>"
+    },
+    {
+        "id": 3,
+        "title": "What is event delegation in jQuery?",
+        "category": "Events",
+        "answer": "<p>Event delegation is a technique where we attach an event handler to a parent element instead of attaching separate handlers to every child element.</p><p>The event bubbles from the child to the parent, where we handle it. This is useful for dynamically created elements and can reduce the number of event handlers in the DOM.</p><pre><code>$(\"#users\").on(\"click\", \".delete-btn\", function () {\n    const id = $(this).data(\"id\");\n    console.log(id);\n});</code></pre>"
+    },
+    {
+        "id": 4,
+        "title": "What is event bubbling in jQuery?",
+        "category": "Events",
+        "answer": "<p>Event bubbling means that when an event occurs on a child element, it propagates upward through its parent elements.</p><p>For example, if a button is inside a div, clicking the button can trigger the button's event handler and then the parent div's event handler.</p>"
+    },
+    {
+        "id": 5,
+        "title": "How do you stop event propagation in jQuery?",
+        "category": "Events",
+        "answer": "<p>We can use <code>event.stopPropagation()</code> to prevent an event from propagating to parent elements.</p><pre><code>$(\".child\").on(\"click\", function (event) {\n    event.stopPropagation();\n});</code></pre><p>I would use it only when there is a specific requirement because excessive use can make event behavior difficult to understand and maintain.</p>"
+    },
+    {
+        "id": 6,
+        "title": "What is the difference between attr() and prop() in jQuery?",
+        "category": "DOM Manipulation",
+        "answer": "<p><code>attr()</code> works with HTML attributes, while <code>prop()</code> works with DOM properties.</p><p>For example, for a checkbox, I would use <code>prop(\"checked\")</code> to determine its current checked state.</p><pre><code>$(\"#agree\").prop(\"checked\");</code></pre>"
+    },
+    {
+        "id": 7,
+        "title": "How do you handle dynamically created elements in jQuery?",
+        "category": "Events",
+        "answer": "<p>I would use event delegation instead of binding an event directly to the dynamically created element.</p><pre><code>$(\"#container\").on(\"click\", \".delete-btn\", function () {\n    // Handle click\n});</code></pre><p>I prefer attaching the delegated event to the closest stable parent rather than directly to <code>document</code>, because this limits event processing and improves maintainability.</p>"
+    },
+    {
+        "id": 8,
+        "title": "How would you improve performance in a jQuery application?",
+        "category": "Performance",
+        "answer": "<p>First, I would profile the application rather than making assumptions. I would check for excessive DOM manipulation, repeated selectors, unnecessary event handlers, large DOM trees, excessive AJAX requests, and memory leaks.</p><p>Depending on the bottleneck, I would cache frequently used selectors, minimize DOM updates, use event delegation, debounce high-frequency events, batch DOM changes, and reduce unnecessary API calls.</p>"
+    },
+    {
+        "id": 9,
+        "title": "What is debouncing?",
+        "category": "Performance",
+        "answer": "<p>Debouncing ensures that a function executes only after a specified amount of time has passed since the last event.</p><p>A common example is a search box. Instead of making an API request for every keystroke, we wait until the user stops typing for a short period before making the request.</p>"
+    },
+    {
+        "id": 10,
+        "title": "What is throttling?",
+        "category": "Performance",
+        "answer": "<p>Throttling limits how frequently a function can execute within a specified period.</p><p>It is useful for high-frequency events such as scrolling, resizing, and mouse movement, where executing the handler for every event can negatively affect performance.</p>"
+    },
+    {
+        "id": 11,
+        "title": "You have 10,000 rows in a table and the page is slow. What would you do?",
+        "category": "Managerial Scenario",
+        "answer": "<p>First, I would profile the page to determine whether the bottleneck is DOM rendering, event handling, JavaScript processing, API response time, or memory usage.</p><p>For the frontend, I would consider pagination or virtualization, event delegation instead of individual handlers, minimizing DOM manipulation, and rendering only the required records.</p><p>I would also check whether the backend can provide pagination instead of sending all 10,000 records to the browser.</p>"
+    },
+    {
+        "id": 12,
+        "title": "A developer has written 500 lines of jQuery for a simple feature. What would you do?",
+        "category": "Code Review",
+        "answer": "<p>I would first understand why the implementation became complex rather than immediately criticizing the developer.</p><p>During the code review, I would look for duplication, unnecessary DOM manipulation, tightly coupled code, poor separation of concerns, and missing abstractions.</p><p>I would suggest a simpler implementation and explain the reasoning. My goal would be to fix the current problem while also helping the developer improve their future implementations.</p>"
+    },
+    {
+        "id": 13,
+        "title": "You inherit a 10-year-old jQuery application. What would you do?",
+        "category": "Legacy Modernization",
+        "answer": "<p>I would not immediately recommend rewriting the entire application.</p><p>First, I would understand the architecture, business-critical functionality, dependencies, test coverage, performance issues, security risks, and technical debt.</p><p>Then I would identify which areas can remain stable and which areas should be modernized. If React migration is the long-term goal, I would recommend incremental migration rather than a risky big-bang rewrite.</p>"
+    },
+    {
+        "id": 14,
+        "title": "Would you use jQuery for a new application today?",
+        "category": "Technical Decision Making",
+        "answer": "<p>Generally, I would not choose jQuery as the primary technology for a large new application. Modern applications benefit from component-based architectures and modern frameworks such as React.</p><p>However, jQuery can still be appropriate for maintaining legacy applications, small DOM-focused utilities, or integrating with an existing jQuery ecosystem.</p><p>I would make the decision based on business requirements, maintainability, team expertise, project constraints, and the existing technology landscape.</p>"
+    },
+    {
+        "id": 15,
+        "title": "Your team wants to migrate jQuery to React. How would you approach it?",
+        "category": "Migration Strategy",
+        "answer": "<p>I would avoid a complete rewrite unless there is a strong business justification.</p><p>I would first identify independent modules that can be migrated safely and establish clear boundaries between React and the existing jQuery code.</p><p>We could gradually replace functionality module by module, add automated tests around critical flows, and monitor performance and production stability throughout the migration.</p><p>This allows us to modernize the application while reducing business and technical risk.</p>"
+    },
+    {
+        "id": 16,
+        "title": "How does jQuery event delegation work internally?",
+        "category": "Events",
+        "answer": "<p>Event delegation relies on event bubbling. Instead of registering separate handlers on multiple child elements, jQuery registers a handler on a parent element and determines whether the event originated from an element matching the delegated selector.</p><p>This reduces the number of event handlers and also allows the handler to work for elements added dynamically after the initial page load.</p>"
+    },
+    {
+        "id": 17,
+        "title": "What is the difference between on(), click(), and trigger() in jQuery?",
+        "category": "Events",
+        "answer": "<p><code>on()</code> is the preferred general-purpose method for attaching event handlers and supports event delegation.</p><p><code>click()</code> is a shorthand for attaching or triggering a click event, but <code>on()</code> provides more flexibility.</p><p><code>trigger()</code> programmatically triggers an event.</p><pre><code>$(\"#button\").on(\"click\", handler);\n$(\"#button\").trigger(\"click\");</code></pre>"
+    },
+    {
+        "id": 18,
+        "title": "How would you prevent duplicate AJAX requests?",
+        "category": "AJAX",
+        "answer": "<p>I would first understand why duplicate requests are occurring. If the cause is repeated user interaction, I could disable the button while the request is running or maintain a request state.</p><p>Depending on the requirement, I could also debounce the action, prevent duplicate submissions, or cancel an existing request before starting a new one.</p>"
+    },
+    {
+        "id": 19,
+        "title": "How do you handle AJAX errors in jQuery?",
+        "category": "AJAX",
+        "answer": "<p>I would handle success and failure explicitly and provide meaningful feedback to the user.</p><pre><code>$.ajax({\n    url: \"/api/users\",\n    method: \"GET\"\n})\n.done(function (response) {\n    // Handle success\n})\n.fail(function (xhr) {\n    // Handle error\n});</code></pre><p>I would also log appropriate technical information for troubleshooting without exposing sensitive details to the user.</p>"
+    },
+    {
+        "id": 20,
+        "title": "How would you implement an AJAX request timeout?",
+        "category": "AJAX",
+        "answer": "<p>jQuery AJAX supports a timeout option. If the request does not complete within the configured period, the request can be handled as a timeout failure.</p><pre><code>$.ajax({\n    url: \"/api/users\",\n    timeout: 5000\n}).fail(function (xhr, status) {\n    if (status === \"timeout\") {\n        // Handle timeout\n    }\n});</code></pre>"
+    },
+    {
+        "id": 21,
+        "title": "How would you cancel an AJAX request?",
+        "category": "AJAX",
+        "answer": "<p>jQuery AJAX returns a jqXHR object, which provides an <code>abort()</code> method. I can retain the request reference and abort it when it is no longer required.</p><pre><code>const request = $.ajax({\n    url: \"/api/search\"\n});\n\nrequest.abort();</code></pre><p>This can be useful for search scenarios where a newer request makes an older request irrelevant.</p>"
+    },
+    {
+        "id": 22,
+        "title": "How do you debug a memory leak in a jQuery application?",
+        "category": "Debugging",
+        "answer": "<p>I would use browser developer tools to inspect memory usage and heap snapshots. I would look for detached DOM nodes, event handlers that are not removed, long-lived references, timers, and objects that remain reachable unnecessarily.</p><p>I would reproduce the issue, compare memory before and after repeated operations, identify objects that continue growing, and then remove unnecessary references or event handlers.</p>"
+    },
+    {
+        "id": 23,
+        "title": "Why should we cache frequently used jQuery selectors?",
+        "category": "Performance",
+        "answer": "<p>Repeatedly executing the same selector can cause unnecessary DOM queries. If the same element is used multiple times, I can store the jQuery object in a variable and reuse it.</p><pre><code>const $button = $(\"#submit\");\n\n$button.addClass(\"active\");\n$button.prop(\"disabled\", true);</code></pre><p>This can improve performance and also make the code easier to read.</p>"
+    },
+    {
+        "id": 24,
+        "title": "What happens if you repeatedly modify the DOM inside a loop?",
+        "category": "Performance",
+        "answer": "<p>Repeated DOM manipulation can be expensive because the browser may need to perform repeated layout and rendering work.</p><p>I would prefer building the required content in memory and updating the DOM fewer times. For large datasets, I would also consider pagination, virtualization, or server-side pagination.</p>"
+    },
+    {
+        "id": 25,
+        "title": "How would you implement form validation using jQuery?",
+        "category": "Forms",
+        "answer": "<p>I would validate required fields, data formats, lengths, and business rules before submitting the form. I would provide clear validation messages and prevent submission when the data is invalid.</p><p>However, client-side validation should not replace server-side validation because client-side validation can be bypassed.</p>"
+    },
+    {
+        "id": 26,
+        "title": "How would you prevent users from submitting a form multiple times?",
+        "category": "Forms",
+        "answer": "<p>I would prevent duplicate submissions by disabling the submit button once the form is submitted and re-enabling it after the request completes or fails.</p><p>I would also consider server-side protection such as idempotency where duplicate requests could create financial or business-impacting operations.</p>"
+    },
+    {
+        "id": 27,
+        "title": "How would you handle a production issue caused by jQuery code?",
+        "category": "Production Support",
+        "answer": "<p>First, I would assess the impact and identify whether the issue affects all users or a specific scenario.</p><p>I would reproduce the problem, inspect logs and browser errors, identify the root cause, and implement the safest fix. If necessary, I would roll back the problematic deployment.</p><p>After resolving the issue, I would add appropriate tests and document the root cause and preventive actions.</p>"
+    },
+    {
+        "id": 28,
+        "title": "How do you review frontend code written by junior developers?",
+        "category": "Leadership",
+        "answer": "<p>I focus on correctness, readability, maintainability, performance, security, testability, and adherence to project standards.</p><p>I try to explain the reasoning behind my feedback instead of simply asking the developer to change the code. This turns code reviews into a learning opportunity and helps the team improve consistently.</p>"
+    },
+    {
+        "id": 29,
+        "title": "How do you balance technical debt against business deadlines?",
+        "category": "Leadership",
+        "answer": "<p>I first understand the business priority and the technical risk. Not every technical debt item needs to be fixed immediately.</p><p>If the debt creates a significant production, security, scalability, or maintenance risk, I would communicate that risk clearly to stakeholders and propose a practical solution.</p><p>For lower-risk debt, I would document it, prioritize it, and address it incrementally without unnecessarily delaying business-critical delivery.</p>"
+    },
+    {
+        "id": 30,
+        "title": "How would you convince management to invest time in refactoring legacy jQuery code?",
+        "category": "Managerial",
+        "answer": "<p>I would not present refactoring as simply a developer preference. I would connect the technical problem to business impact.</p><p>For example, I would explain how the legacy code is increasing development time, causing production defects, creating performance issues, increasing onboarding effort, or making new features risky.</p><p>I would propose a measurable and incremental plan, estimate the effort, explain the expected benefits, and prioritize the highest-impact areas rather than requesting a large open-ended rewrite.</p>"
+    },
+    {
+        "id": 31,
+        "title": "What is the difference between $(document).ready() and window.onload?",
+        "category": "jQuery Fundamentals",
+        "answer": "<p><code>$(document).ready()</code> executes when the HTML document has been fully parsed and the DOM is ready to be manipulated. It does not wait for all images and other external resources to finish loading.</p><p><code>window.onload</code> executes after the entire page, including images and other resources, has finished loading.</p><p>For most DOM-related initialization, I prefer <code>$(document).ready()</code> because it does not unnecessarily wait for external resources.</p>"
+    },
+    {
+        "id": 32,
+        "title": "What is the difference between $(this) and this in jQuery?",
+        "category": "jQuery Fundamentals",
+        "answer": "<p><code>this</code> refers to the DOM element in a regular jQuery event callback, while <code>$(this)</code> wraps that DOM element in a jQuery object so that jQuery methods can be used.</p><pre><code>$(\".button\").on(\"click\", function () {\n    console.log(this);        // DOM element\n    console.log($(this));     // jQuery object\n});</code></pre>"
+    },
+    {
+        "id": 33,
+        "title": "What is the difference between find() and children() in jQuery?",
+        "category": "DOM Traversal",
+        "answer": "<p><code>children()</code> returns only the immediate child elements, whereas <code>find()</code> searches through all descendant levels below the selected element.</p><pre><code>$(\"#parent\").children(\".item\");\n$(\"#parent\").find(\".item\");</code></pre><p>I choose between them based on whether I need direct children or descendants at any depth.</p>"
+    },
+    {
+        "id": 34,
+        "title": "What is the difference between closest() and parent()?",
+        "category": "DOM Traversal",
+        "answer": "<p><code>parent()</code> returns the immediate parent element. <code>closest()</code> searches upward through the DOM tree and returns the first ancestor that matches the specified selector.</p><p>For example, when handling a click inside a table row, I would commonly use <code>$(event.target).closest('tr')</code> to reliably identify the row.</p>"
+    },
+    {
+        "id": 35,
+        "title": "What is method chaining in jQuery?",
+        "category": "jQuery Fundamentals",
+        "answer": "<p>Method chaining allows multiple jQuery methods to be called on the same jQuery object in a single statement.</p><pre><code>$(\"#message\")\n    .addClass(\"active\")\n    .text(\"Updated\")\n    .show();</code></pre><p>It can make code concise, but I avoid excessively long chains when they reduce readability.</p>"
+    },
+    {
+        "id": 36,
+        "title": "What is the difference between each() and map() in jQuery?",
+        "category": "Arrays and Collections",
+        "answer": "<p><code>each()</code> is primarily used to iterate over elements or collections and perform an operation on each item. <code>map()</code> is used when we want to transform each item and produce a resulting collection.</p><p>For data transformation, I generally prefer modern JavaScript methods such as <code>map()</code>, <code>filter()</code>, and <code>reduce()</code> where appropriate.</p>"
+    },
+    {
+        "id": 37,
+        "title": "How do you check whether an element exists using jQuery?",
+        "category": "DOM Manipulation",
+        "answer": "<p>A common approach is to check the length of the jQuery collection.</p><pre><code>if ($(\"#user\").length > 0) {\n    // Element exists\n}</code></pre><p>A jQuery selector returns a collection, so a length greater than zero indicates that matching elements were found.</p>"
+    },
+    {
+        "id": 38,
+        "title": "What is the difference between empty(), remove(), and detach()?",
+        "category": "DOM Manipulation",
+        "answer": "<p><code>empty()</code> removes the child elements and content from the selected element but keeps the selected element itself.</p><p><code>remove()</code> removes the selected element itself along with its associated jQuery data and event handlers.</p><p><code>detach()</code> also removes the element from the DOM but preserves its associated jQuery data and event handlers, allowing it to be reinserted later.</p>"
+    },
+    {
+        "id": 39,
+        "title": "How would you optimize repeated DOM manipulation?",
+        "category": "Performance",
+        "answer": "<p>I would minimize the number of DOM updates. Instead of repeatedly appending individual elements, I would build the content first and update the DOM in fewer operations.</p><p>For large datasets, I would also consider pagination, document fragments, efficient templating, or virtualization depending on the application's requirements.</p>"
+    },
+    {
+        "id": 40,
+        "title": "How would you implement a live search using jQuery?",
+        "category": "AJAX",
+        "answer": "<p>I would listen for the input event, debounce the user's typing, validate the search term, and then make an AJAX request. I would also handle loading, success, error, and empty-result states.</p><p>For a production implementation, I would consider cancelling previous requests when a newer search starts so that stale responses do not overwrite newer results.</p>"
+    },
+    {
+        "id": 41,
+        "title": "How would you prevent stale AJAX responses from updating the UI?",
+        "category": "AJAX",
+        "answer": "<p>If multiple requests can be triggered, I would keep track of the latest request and cancel the previous request when appropriate.</p><p>Alternatively, I could assign a sequence number to requests and only process the response belonging to the latest request. This is particularly useful for autocomplete and live-search functionality.</p>"
+    },
+    {
+        "id": 42,
+        "title": "How would you handle authentication errors from an AJAX API?",
+        "category": "Security",
+        "answer": "<p>I would distinguish authentication or authorization failures from general server errors. For example, a 401 response may indicate an expired authentication state, while a 403 may indicate insufficient permissions.</p><p>The frontend should handle these cases consistently, such as refreshing authentication when supported or redirecting the user to the appropriate authentication flow. Sensitive authentication details should never be exposed in client-side logs.</p>"
+    },
+    {
+        "id": 43,
+        "title": "How would you handle a slow API response in a jQuery application?",
+        "category": "AJAX",
+        "answer": "<p>I would first determine whether the delay is caused by the frontend, network, API processing, or database.</p><p>From the frontend, I would provide a loading indicator, define a reasonable timeout, prevent unnecessary duplicate requests, and handle failures gracefully.</p><p>If the API itself is slow, I would work with the backend team to investigate query performance, payload size, caching, and server-side processing.</p>"
+    },
+    {
+        "id": 44,
+        "title": "How would you handle multiple AJAX requests that depend on each other?",
+        "category": "AJAX",
+        "answer": "<p>I would avoid deeply nested callbacks because they make the code difficult to maintain. jQuery's Deferred and Promise APIs can be used to coordinate asynchronous operations.</p><p>Where possible, I would also consider whether the backend can provide a combined API or whether independent requests can run in parallel rather than sequentially.</p>"
+    },
+    {
+        "id": 45,
+        "title": "What is callback hell and how would you avoid it?",
+        "category": "JavaScript and jQuery",
+        "answer": "<p>Callback hell occurs when asynchronous operations are deeply nested inside one another, making the code difficult to read, test, and maintain.</p><p>I would avoid it by using promises or Deferred objects, breaking functionality into smaller functions, and using modern JavaScript <code>async/await</code> when the project supports it.</p>"
+    },
+    {
+        "id": 46,
+        "title": "How would you handle a large API response in the browser?",
+        "category": "Performance",
+        "answer": "<p>I would first determine whether the application really needs the complete response. Ideally, the API should support pagination, filtering, sorting, and field selection.</p><p>On the frontend, I would avoid rendering all records simultaneously and consider pagination or virtualization. I would also minimize unnecessary data transformations and DOM updates.</p>"
+    },
+    {
+        "id": 47,
+        "title": "How would you debug an event that is firing multiple times?",
+        "category": "Debugging",
+        "answer": "<p>First, I would inspect where the handler is registered and determine whether the same code is being executed multiple times.</p><p>I would check for duplicate event bindings, repeated component or page initialization, incorrect delegation, and handlers that are not removed.</p><p>Using browser developer tools and logging the handler registration and execution can help identify the root cause.</p>"
+    },
+    {
+        "id": 48,
+        "title": "What is the purpose of off() in jQuery?",
+        "category": "Events",
+        "answer": "<p><code>off()</code> removes previously attached event handlers. It is useful when cleaning up event listeners or preventing duplicate event registrations.</p><pre><code>$(\"#button\").off(\"click\", handleClick);</code></pre><p>In reusable modules or components, proper event cleanup is important to prevent memory leaks and unexpected behavior.</p>"
+    },
+    {
+        "id": 49,
+        "title": "How would you avoid duplicate event handlers?",
+        "category": "Events",
+        "answer": "<p>I would make sure initialization code runs only once and remove an existing handler before attaching it when necessary.</p><pre><code>$(\"#button\")\n    .off(\"click.myFeature\")\n    .on(\"click.myFeature\", handleClick);</code></pre><p>Using event namespaces can make event management more predictable and easier to clean up.</p>"
+    },
+    {
+        "id": 50,
+        "title": "What are jQuery event namespaces?",
+        "category": "Events",
+        "answer": "<p>Event namespaces allow us to associate handlers with a custom namespace so that specific handlers can be removed without affecting unrelated handlers.</p><pre><code>$(\"#button\").on(\"click.myFeature\", handleClick);\n$(\"#button\").off(\"click.myFeature\");</code></pre><p>This is especially useful in large applications where multiple modules may register handlers on the same elements.</p>"
+    },
+    {
+        "id": 51,
+        "title": "How would you implement a reusable jQuery component?",
+        "category": "Architecture",
+        "answer": "<p>I would encapsulate the component's DOM selection, event handling, state, configuration, and public methods rather than spreading the logic across unrelated files.</p><p>I would also define a clear initialization and cleanup process, avoid global variables, use event namespaces, and make the component configurable where appropriate.</p>"
+    },
+    {
+        "id": 52,
+        "title": "How would you structure a large jQuery application?",
+        "category": "Architecture",
+        "answer": "<p>I would separate concerns instead of keeping all functionality inside large JavaScript files. I would organize code into modules for API communication, UI manipulation, validation, business logic, utilities, and application initialization.</p><p>I would also establish naming conventions, coding standards, reusable components, automated testing, and clear ownership of modules.</p>"
+    },
+    {
+        "id": 53,
+        "title": "How would you manage global variables in a large jQuery application?",
+        "category": "Architecture",
+        "answer": "<p>I would minimize global variables because they create tight coupling and increase the risk of naming conflicts and unexpected state changes.</p><p>I would use modules, closures, namespaces, or modern JavaScript module systems depending on the project's technology constraints.</p>"
+    },
+    {
+        "id": 54,
+        "title": "How would you introduce coding standards into a legacy jQuery project?",
+        "category": "Leadership",
+        "answer": "<p>I would first understand the existing codebase and identify the most important standards around naming, formatting, modularity, error handling, security, and testing.</p><p>I would document practical guidelines, configure automated tools such as ESLint and formatting tools where possible, and introduce the standards incrementally rather than attempting to rewrite the entire codebase.</p>"
+    },
+    {
+        "id": 55,
+        "title": "How would you handle a developer who disagrees with your jQuery code review feedback?",
+        "category": "Leadership",
+        "answer": "<p>I would focus the discussion on technical reasoning and project standards rather than personal preferences.</p><p>I would ask the developer to explain their approach, understand their reasoning, and then compare both solutions based on maintainability, performance, readability, testability, and business requirements.</p><p>If the team already has an agreed coding standard, I would use that as the reference point. The objective is to reach the best solution for the project, not simply to prove who is right.</p>"
+    },
+    {
+        "id": 56,
+        "title": "How would you estimate a jQuery frontend task?",
+        "category": "Project Management",
+        "answer": "<p>I would break the requirement into smaller technical tasks such as UI changes, DOM interactions, API integration, validation, error handling, testing, and deployment support.</p><p>I would consider dependencies, complexity, unknowns, developer availability, and testing effort. For uncertain areas, I would explicitly identify the risk instead of giving an overly optimistic estimate.</p>"
+    },
+    {
+        "id": 57,
+        "title": "How would you prioritize multiple frontend bugs in a jQuery application?",
+        "category": "Project Management",
+        "answer": "<p>I would prioritize based on business impact, severity, number of affected users, security implications, production availability, and whether there is a workaround.</p><p>A critical production issue affecting payments or core business functionality would generally take priority over a minor UI issue. I would communicate the prioritization and expected timelines clearly to stakeholders.</p>"
+    },
+    {
+        "id": 58,
+        "title": "How would you handle technical debt when the team has no time for refactoring?",
+        "category": "Technical Debt",
+        "answer": "<p>I would avoid trying to fix all technical debt at once. Instead, I would identify debt that directly affects current development, production stability, security, or performance.</p><p>Whenever we modify an affected area, I would use the opportunity to make targeted improvements. I would also document larger debt items and include high-priority items in future planning.</p>"
+    },
+    {
+        "id": 59,
+        "title": "How would you decide between fixing existing jQuery code and rewriting it?",
+        "category": "Technical Decision Making",
+        "answer": "<p>I would evaluate the business value, complexity, defect rate, maintainability, performance, test coverage, future requirements, and migration cost.</p><p>If the existing code is stable and the change is small, fixing it may be the better option. If the code is causing repeated failures, blocking new development, or has become extremely difficult to maintain, a targeted rewrite may provide better long-term value.</p><p>I would prefer an incremental approach when possible rather than a risky full rewrite.</p>"
+    },
+    {
+        "id": 60,
+        "title": "What would you do if a business-critical jQuery application has no automated tests?",
+        "category": "Testing and Quality",
+        "answer": "<p>I would not immediately attempt to create complete test coverage for the entire legacy application.</p><p>First, I would identify the most critical business flows and create regression tests around them. Then I would gradually increase coverage as new features are developed or existing areas are modified.</p><p>This provides immediate risk reduction while building a sustainable testing strategy.</p>"
+    },
+    {
         "id": 1401,
         "title": "What is jQuery and why was it widely used?",
         "category": "jQuery",
@@ -5104,5 +5464,5 @@
         "title": "What is the difference between greedy and lazy quantifiers in regular expressions?",
         "category": "JavaScript",
         "answer": "<p>Greedy quantifiers attempt to match as much text as possible while still allowing the overall pattern to succeed. Lazy quantifiers attempt to match as little as possible. For example, <code>.*</code> is greedy while <code>.*?</code> is lazy.</p>"
-}
+    }
 ]
